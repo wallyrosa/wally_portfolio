@@ -30,6 +30,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	color: aliceblue;
+	font-family: 'poppins';
+	background: #000014;
+	background-image: linear-gradient(88deg, #76108c -20%, #210240 70%);
 }
 ol, ul {
 	list-style: none;

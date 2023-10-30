@@ -1,7 +1,5 @@
-function App() {
+export function App() {
   return (
     <div>Hellow!</div>
   );
 }
-
-export default App;
