@@ -1,5 +1,11 @@
+import { BackgroundGradient } from "./assets/common/BackgroundGradient";
+import { Content } from "./assets/components/Header/Content";
+
 export function App() {
   return (
-    <div>Hellow!</div>
+    <>
+      <BackgroundGradient />
+      <Content />
+    </>
   );
 }
