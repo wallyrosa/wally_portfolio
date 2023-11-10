@@ -1,21 +1,22 @@
 import { Header } from "..";
 import { ShowPerfil } from "../../ShowPerfil";
 import { Terminal } from "../../terminals/Terminal";
+import { Box } from "@mui/material";
 
 export function Content() {
     return (
       <>
-        <div className="container">
+        <Box className="container">
           <Header />
-          <div className="contentMain">
+          <Box className="contentMain">
             <Terminal />
             <ShowPerfil />
-          </div>
-          <div className="lineStyleBottom ">
-            <div className="cubleStyleLeft"></div>
-            <div className="lineToStyleLeft"></div>
-          </div>
-            </div>
+          </Box>
+          <Box className="lineStyleBottom ">
+            <Box className="cubleStyleLeft"></Box>
+            <Box className="lineToStyleLeft"></Box>
+          </Box>
+            </Box>
             <footer className="footer"></footer>
       </>
     );

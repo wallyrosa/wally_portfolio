@@ -1,8 +1,10 @@
+import { Box } from "@mui/material";
+
 export function BackgroundGradient() {
     return (
-        <div className="backgroundContainer">
-            <div className="circleTop" />
-            <div className="circleLeft" />
-        </div>
+        <Box className="backgroundContainer">
+            <Box className="circleTop" />
+            <Box className="circleLeft" />
+        </Box>
     )
 }

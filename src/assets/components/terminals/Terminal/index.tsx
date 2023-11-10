@@ -26,29 +26,29 @@ export function Terminal() {
   });
   return (
     <Box className="terminal">
-      <div className="topTerminal">
-        <div className="buttonsTerminal" />
+      <Box className="topTerminal">
+        <Box className="buttonsTerminal" />
         <button className="buttonAbaTerminal">~/welcome</button>
         <button className="buttonAbaTerminal">~/about_me</button>
         <button className="moreButton"></button>
-      </div>
-      <div className="contentTerminal">
-        <div className="columnNumber">
+      </Box>
+      <Box className="contentTerminal">
+        <Box className="columnNumber">
           <ul>1</ul>
           <ul>2</ul>
           <ul>3</ul>
           <ul>4</ul>
           <ul>5</ul>
-        </div>
-        <div className="textAreaTerminal">
+        </Box>
+        <Box className="textAreaTerminal">
           <strong className="titleTerminal">{"wally@wally: ~$ "}</strong>
           {hellow[0]}
           {myNameIs[0]}
           <strong className="nameTerminal">{name[0]}</strong>
           {welcome[0]}
           <Cursor />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </Box>
   );
 }

@@ -3,18 +3,18 @@ import { Box } from '@mui/material'
 export function SmallTerminal() {
     return (
       <Box className="terminalSmall">
-        <div className="buttonsTerminal" />
-        <div className="contentTerminalSmall">
-          <div className="gitlab_icon">
-            <div className="backGit gitlab_icon" />
-          </div>
-          <div className="linkedin_icon">
-            <div className="backLinkedin linkedin_icon" />
-          </div>
-          <div className="wpp_icon">
-            <div className="backWpp wpp_icon" />
-          </div>
-        </div>
+        <Box className="buttonsTerminal" />
+        <Box className="contentTerminalSmall">
+          <Box className="gitlab_icon">
+            <Box className="backGit gitlab_icon" />
+          </Box>
+          <Box className="linkedin_icon">
+            <Box className="backLinkedin linkedin_icon" />
+          </Box>
+          <Box className="wpp_icon">
+            <Box className="backWpp wpp_icon" />
+          </Box>
+        </Box>
       </Box>
     );
 }

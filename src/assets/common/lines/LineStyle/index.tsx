@@ -10,19 +10,19 @@ export function LineStyle(props: LineStyleProps) {
     <Box className="lineStyle">
       <Grid container>
         <Grid item xs={1}>
-          <div className="lineStyleLeft">
-            <div className="cubleStyleLeft"></div>
-            <div className="lineToStyleLeft"></div>
-          </div>
+          <Box className="lineStyleLeft">
+            <Box className="cubleStyleLeft"></Box>
+            <Box className="lineToStyleLeft"></Box>
+          </Box>
         </Grid>
         <Grid  item xs={4}>
           {props.children}
         </Grid>
         <Grid item xs={7}>
-          <div className="lineStyleRight">
-            <div className="lineToStyleRight"></div>
-            <div className="cubleStyleRight"></div>
-          </div>
+          <Box className="lineStyleRight">
+            <Box className="lineToStyleRight"></Box>
+            <Box className="cubleStyleRight"></Box>
+          </Box>
         </Grid>
       </Grid>
     </Box>
