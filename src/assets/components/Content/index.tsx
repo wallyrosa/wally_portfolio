@@ -2,6 +2,7 @@ import { ContentMain } from "./contents/ContentMain";
 import { Header } from "../Header";
 import { Box } from "@mui/material";
 import { ContentSkills } from "./contents/ContentSkills";
+import { ContentProject } from "./contents/ContentProjects";
 
 export function Content() {
     return (
@@ -12,6 +13,7 @@ export function Content() {
             <ContentMain />
           </Box>
           <ContentSkills />
+          <ContentProject />
         </Box>
         <footer className="footer"></footer>
       </>
