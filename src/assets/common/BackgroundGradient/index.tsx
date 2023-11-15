@@ -5,6 +5,7 @@ export function BackgroundGradient() {
         <Box className="backgroundContainer">
             <Box className="circleTop" />
             <Box className="circleLeft" />
+            <Box className="circleSkills" />
         </Box>
     )
 }

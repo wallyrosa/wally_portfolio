@@ -9,8 +9,7 @@
     --lineStyle-color: #ffffff85;
     --white-color: #ffffff;
     --white-color-25: #ffffff40;
-    --terminal-theme: #83519B;
-    --terminal-name-gradient: linear-gradient(270deg, #C8B7CE -9.79%, #E9AFFF -9.77%, #5D44EA 113.86%);
+    --terminal-theme: #BB91F3;
     --gradient-terminal: linear-gradient(313deg, #191422 0%, #1B0F35 69.58%);
 }
 
@@ -21,6 +20,34 @@ body {
 	min-height: 100vh;
 	backdrop-filter: blur(180px);
 	-webkit-backdrop-filter: blur(180px);
+}
+
+::selection {
+    color: var(--primary-purple) !important;
+    background: var(--terminal-theme);
+}
+
+.fullScreen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.marginLine {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    background-image: url(../../public/favicon.ico);
+    background-position: center;
+    background-size: 32px 32px;
 }
 
 .header {
@@ -59,7 +86,6 @@ body {
 .buttonTransparent {
     display: flex;
     font-family: 'Jura';
-    min-width: 145px;
     padding: 10px 20px;
     justify-content: center;
     align-items: center;
@@ -126,6 +152,15 @@ body {
     height: 35px;
     display: flex;
     align-items: center;
+}
+
+
+.lineStyleRight {
+    justify-content: flex-end;
+}
+
+.lineStyleLeft {
+    justify-content: flex-start;
 }
 
 .lineStyleBottom {
@@ -285,11 +320,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 165%;
-    text-transform: capitalize;
-    background: var(--terminal-name-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--terminal-theme);
 }
 
 .titleTerminal {
@@ -302,7 +333,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .backPerfil {
@@ -416,6 +447,148 @@ body {
     z-index: 2;
 }
 
+
+
+.titleContents {
+    color: var(--font-color-main);
+    text-align: center;
+    font-family: 'Bai Jamjuree';
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.subTitleContents {
+    text-align: center;
+    font-family: 'Bai Jamjuree';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 275;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.pointStyle {
+    color: var(--terminal-theme);
+    font-family: 'Bai Jamjuree';
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.skillsAvancadas {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.card {
+    cursor: pointer;
+    transition: transform 0.4s ease
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .lineCard {
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px var(--terminal-theme);
+}
+
+.lineCard {
+    width: 80%;
+    height: 10px;
+    background-color: var(--terminal-theme);
+    margin: auto;
+    transition: all 0.4s;
+}
+
+.cardBorder {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+
+.textCard {
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+    color: var(--font-color-main);
+    text-align: center;
+    font-family: 'Jura';
+    font-size: 19px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    transition: all 0.4s;
+}
+
+.icon {
+    width: 100%;
+    min-height: 100px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    transition: all 0.4s;
+}
+
+.html {
+    background-image: url('../assets/imgs/icons/html5_icon.svg');
+    background-size: 64px 76px;
+}
+
+.react {
+    background-image: url('../assets/imgs/icons/react_icon.svg');
+    background-size: 85px 76px;
+}
+
+.javascript {
+    background-image: url('../assets/imgs/icons/js_icon.svg');
+    background-size: 76px 76px;
+}
+
+.typescript {
+    background-image: url('../assets/imgs/icons/typescript_icon.svg');
+    background-size: 76px 76px;
+}
+
+.css {
+    height: 100%;
+    background-image: url('../assets/imgs/icons/css_icon.svg');
+    background-size: 64px 76px;
+}
+
+.vue {
+    height: 100%;
+    background-image: url('../assets/imgs/icons/vue_icon.svg');
+    background-size: 80px 76px;
+}
+
+.material-ui {
+    height: 100%;
+    background-image: url('../assets/imgs/icons/material_ui_icon.svg');
+    background-size: 86px 86px;
+}
+
+.figma {
+    height: 100%;
+    background-image: url('../assets/imgs/icons/figma_icon.svg');
+    background-size: 44px 76px;
+}
+
 .backgroundContainer {
     width: 100%;
     height: 100%;
@@ -436,17 +609,31 @@ body {
     top: 50px;
     left: 45px;
 }
+
 .circleLeft {
-    width: 900px;
-    height: 900px;
+    width: 700px;
+    height: 1175px;
     background-color: var(--primary-blue);
     border-radius: 50%;
     filter: blur(120px);
     opacity: 0.25;
     position: relative;
-    top: -650px;
-    left: -25px;
+    top: -830px;
+    left: 70px;
     float: right;
+}
+
+.circleSkills {
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    background-color: var(--primary-pink);
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.25;
+    position: relative;
+    bottom: 45px;
+    float: bottom;
 }
 
 .footer {

@@ -1,5 +1,7 @@
 import { Grid, Box } from "@mui/material";
 import { ReactNode } from "react";
+import { LineRight } from "../LineRight";
+import { LineLeft } from "../LineLeft";
 
 interface LineStyleProps {
   children?: ReactNode;
@@ -10,19 +12,13 @@ export function LineStyle(props: LineStyleProps) {
     <Box className="lineStyle">
       <Grid container>
         <Grid item xs={1}>
-          <Box className="lineStyleLeft">
-            <Box className="cubleStyleLeft"></Box>
-            <Box className="lineToStyleLeft"></Box>
-          </Box>
+          <LineLeft />
         </Grid>
-        <Grid  item xs={4}>
+        <Grid  item xs={3}>
           {props.children}
         </Grid>
-        <Grid item xs={7}>
-          <Box className="lineStyleRight">
-            <Box className="lineToStyleRight"></Box>
-            <Box className="cubleStyleRight"></Box>
-          </Box>
+        <Grid item xs={8}>
+          <LineRight />
         </Grid>
       </Grid>
     </Box>
