@@ -16,7 +16,7 @@
 body {
     color: var(--font-color-main);
 	font-family: 'Bai Jamjuree', sans-serif;
-	background: var(--background-main);
+	background-color: var(--background-main);
 	min-height: 100vh;
 	backdrop-filter: blur(180px);
 	-webkit-backdrop-filter: blur(180px);
@@ -588,6 +588,48 @@ body {
     height: 100%;
     background-image: url('../assets/imgs/icons/figma_icon.svg');
     background-size: 44px 76px;
+}
+
+.terminalView {
+    width: 475px;
+    height: 345px;
+    background: var(--gradient-terminal);
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px 0px #000000b3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleProject {
+    color: var(--font-color-main);
+    font-family: Bai Jamjuree;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.describeProject {
+    color: var(--font-color-main);
+    font-family: 'Jura';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+.imgTerminal {
+    width: 90%;
+    height: 80%;
+    border-radius: 8px;
+}
+
+.project1 {
+    background-image: url('../assets/imgs/teste.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .backgroundContainer {
