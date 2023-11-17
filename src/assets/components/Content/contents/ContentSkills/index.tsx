@@ -51,16 +51,16 @@ export function ContentSkills() {
           </Box>
           <Box className="subTitleContents">Avançado</Box>
           <Box className="skillsAvancadas">
-            {cardsAvancados.map((card) => (
-              <CardSkill icon={card.icon} name={card.name} />
+            {cardsAvancados.map((card, index) => (
+              <CardSkill key={index} icon={card.icon} name={card.name} />
             ))}
           </Box>
           <Box sx={{ margin: "20px 0px" }} className="subTitleContents">
             Em Desenvolvimento
           </Box>
           <Box className="skillsAvancadas">
-            {cardsDesenvolvimento.map((card) => (
-              <CardSkill icon={card.icon} name={card.name} />
+            {cardsDesenvolvimento.map((card, index) => (
+              <CardSkill key={index} icon={card.icon} name={card.name} />
             ))}
           </Box>
         </Box>
