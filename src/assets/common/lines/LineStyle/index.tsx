@@ -11,13 +11,13 @@ export function LineStyle(props: LineStyleProps) {
   return (
     <Box className="lineStyle">
       <Grid container>
-        <Grid item xs={1}>
+        <Grid sx={{ margin: "auto" }} item xs={1}>
           <LineLeft />
         </Grid>
-        <Grid  item xs={3}>
+        <Grid item xs={3}>
           {props.children}
         </Grid>
-        <Grid item xs={8}>
+        <Grid sx={{ margin: "auto" }} item xs={8}>
           <LineRight />
         </Grid>
       </Grid>

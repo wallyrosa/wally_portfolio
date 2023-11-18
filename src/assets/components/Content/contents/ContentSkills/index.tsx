@@ -2,51 +2,16 @@ import { Box } from "@mui/material";
 import { LineRight } from "../../../../common/lines/LineRight";
 import { LineLeft } from "../../../../common/lines/LineLeft";
 import { CardSkill } from "../../../../common/CardSkill";
+import { cardsAvancados, cardsDesenvolvimento } from "./cards/intex";
 
 export function ContentSkills() {
-  const cardsAvancados = [
-    {
-      icon: "html",
-      name: "html",
-    },
-    {
-      icon: "react",
-      name: "react",
-    },
-    {
-      icon: "javascript",
-      name: "javascript",
-    },
-    {
-      icon: "typescript",
-      name: "typescript",
-    },
-    {
-      icon: "css",
-      name: "css",
-    },
-  ];
-  const cardsDesenvolvimento = [
-    {
-      icon: "vue",
-      name: "vue",
-    },
-    {
-      icon: "material-ui",
-      name: "material ui",
-    },
-    {
-      icon: "figma",
-      name: "figma",
-    },
-  ];
     return (
       <Box className="fullScreen">
         <Box className="marginLine">
           <LineRight width={"60%"} />
         </Box>
         <Box>
-          <Box className="titleContents">
+          <Box id="skills" className="titleContents">
             SKILLS<strong className="pointStyle">.</strong>
           </Box>
           <Box className="subTitleContents">Avançado</Box>

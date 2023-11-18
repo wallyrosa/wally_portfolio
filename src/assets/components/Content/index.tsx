@@ -16,7 +16,7 @@ export function Content() {
           <ContentSkills />
           <ContentProject />
           <BackToTop />
-        </Box>
+        </Box>      
         <footer className="footer"></footer>
       </>
     );

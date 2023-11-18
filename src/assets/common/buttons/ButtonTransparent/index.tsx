@@ -5,6 +5,7 @@ interface ButtonTransparentProps {
     width?: string
     height?: string
     children?: ReactNode
+    href: string
 }
 
 export function ButtonTransparent(props: ButtonTransparentProps) {
@@ -13,12 +14,13 @@ export function ButtonTransparent(props: ButtonTransparentProps) {
         height: `${props?.height ? props?.height : '35px'}`
     }
     return (
-      <button
+      <a
         style={style}
         onClick={props?.onClick}
         className="buttonTransparent"
+        href={props.href}
       >
         {props?.children}
-      </button>
+      </a>
     );
 }
