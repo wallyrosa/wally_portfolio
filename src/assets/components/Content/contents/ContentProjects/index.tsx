@@ -19,7 +19,7 @@ export function ContentProject() {
       <Box className="marginLine">
         <LineRight width={"60%"} />
       </Box>
-      <Box className="titleContents">
+      <Box id="projects" className="titleContents">
         PROJETOS<strong className="pointStyle">.</strong>
       </Box>
       {projects?.map((project, index) => (
@@ -28,8 +28,8 @@ export function ContentProject() {
             display: "flex",
             margin: "40px 0px",
             direction: `${leftOrRight(index).direction}`,
-            height: '400px',
-            alignItems: 'center'
+            height: "400px",
+            alignItems: "center",
           }}
           key={index}
         >
@@ -53,7 +53,15 @@ export function ContentProject() {
               margin: "0px 30px",
             }}
           >
-            <Box sx={{ direction: 'ltr', display: 'flex', alignItems: 'center', justifyContent: `${leftOrRight(index).justify}` }} className="titleProject">
+            <Box
+              sx={{
+                direction: "ltr",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: `${leftOrRight(index).justify}`,
+              }}
+              className="titleProject"
+            >
               {project.title}
               <strong className="pointStyle">.</strong>
             </Box>
@@ -61,6 +69,9 @@ export function ContentProject() {
           </Box>
         </Box>
       ))}
+      <Box className="comingSoon">
+        EM BREVE<strong className="pointStyle">.</strong>
+      </Box>
       <Box className="marginLine">
         <LineLeft width={"60%"} />
       </Box>
