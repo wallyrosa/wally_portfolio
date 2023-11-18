@@ -631,6 +631,72 @@ body {
     background-position: center;
     background-size: cover;
 }
+.project2 {
+    background-image: url('../assets/imgs/teste.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.project3 {
+    background-image: url('../assets/imgs/teste.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.backToTop {
+    width: 70px;
+    height: 70px;
+    background: var(--white-color-25);
+    position: fixed;
+    border: 0;
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 65px;
+    bottom: 0px;
+    z-index: 9999;
+    color: var(--terminal-theme);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 0.2s;
+    animation-duration: 0.2s;
+    animation-name: slidein;
+    display: none;
+}
+
+.show {
+    opacity: 1;
+    transition: all 0.2s;
+    animation-duration: 0.2s;
+    animation-name: slideout;
+}
+
+@keyframes slidein {
+    from {
+        bottom: 0px;
+    }
+    to {
+        bottom: -50px;
+        display: flex;
+    }
+}
+
+@keyframes slideout {
+    from {
+        bottom: -50px;
+        display: flex;
+    }
+    to {
+        bottom: 0px;
+        display: none;
+    }
+}
 
 .backgroundContainer {
     width: 100%;
