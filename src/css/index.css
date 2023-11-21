@@ -28,7 +28,6 @@ body {
     color: var(--font-color-main);
 	font-family: 'Bai Jamjuree', sans-serif;
 	background-color: var(--background-main);
-    
 }
 
 ::selection {
@@ -631,6 +630,40 @@ body {
 
 .active {
     opacity: 1;
+}
+
+.typingAnimation {
+    width: 368px;
+    line-height: 130%;
+    animation: typing 1.2s steps(187), blink 0.5s step-end infinite alternate;
+    letter-spacing: normal;
+    overflow: auto;
+    border-right: 20px solid var(--white-color-25);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.comingSoon {
+    color: var(--font-color-main);
+    font-family: 'Bai Jamjuree';
+    font-size: 50px;
+    margin: 50px 0px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .typingAnimation {
