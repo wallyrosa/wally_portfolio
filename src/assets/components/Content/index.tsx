@@ -9,14 +9,14 @@ export function Content() {
     return (
       <>
         <Box className="container">
-          <Box className="fullScreen">
+          <Box className="fullScreen" sx={{ scrollSnapAlign: "center" }}>
             <Header />
             <ContentMain />
           </Box>
           <ContentSkills />
           <ContentProject />
           <BackToTop />
-        </Box>      
+        </Box>
         <footer className="footer"></footer>
       </>
     );

@@ -6,7 +6,7 @@ import { cardsAvancados, cardsDesenvolvimento } from "./cards/intex";
 
 export function ContentSkills() {
     return (
-      <Box className="fullScreen">
+      <Box className="fullScreen" sx={{ scrollSnapAlign: "center" }}>
         <Box className="marginLine">
           <LineRight width={"60%"} />
         </Box>

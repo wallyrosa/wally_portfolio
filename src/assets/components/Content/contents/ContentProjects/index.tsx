@@ -5,9 +5,8 @@ import { projects } from "./projects";
 
 export function ContentProject() {
   function leftOrRight(index: number) {
-    const position = { direction: "ltr", justify: "flex-start" };
+    const position = { justify: "flex-start" };
     if (index % 2) {
-      position.direction = 'rtl';
       position.justify = 'flex-end';
       return position
     }
@@ -15,59 +14,82 @@ export function ContentProject() {
   }
   
   return (
-    <Box sx={{ minHeight: "100vh", height: "100%" }} className="fullScreen">
-      <Box className="marginLine">
-        <LineRight width={"60%"} />
-      </Box>
-      <Box id="projects" className="titleContents">
-        PROJETOS<strong className="pointStyle">.</strong>
-      </Box>
+    <>
       {projects?.map((project, index) => (
-        <Box
-          sx={{
-            display: "flex",
-            margin: "40px 0px",
-            direction: `${leftOrRight(index).direction}`,
-            height: "400px",
-            alignItems: "center",
-          }}
-          key={index}
-        >
-          <Box className="terminalView">
-            <Box sx={{ width: "100%", margin: "10px 0px", direction: "ltr" }}>
-              <Box
-                sx={{ transform: "scale(0.8)" }}
-                className="buttonsTerminal"
-              />
-            </Box>
-            <Box
-              sx={{ direction: "ltr" }}
-              className={`imgTerminal ${project.imgClass}`}
-            />
-          </Box>
-          <Box
-            sx={{
-              width: "50%",
-              maxHeight: "400px",
-              overflow: "auto",
-              margin: "0px 30px",
-            }}
-          >
+        <>
+          <Box sx={{ flexDirection: "column" }} className="fullScreen">
             <Box
               sx={{
-                direction: "ltr",
                 display: "flex",
+                height: "100vh",
                 alignItems: "center",
-                justifyContent: `${leftOrRight(index).justify}`,
+                justifyContent: "center",
+                scrollSnapAlign: "center",
+                flexDirection: "column",
               }}
-              className="titleProject"
+              key={index}
             >
-              {project.title}
-              <strong className="pointStyle">.</strong>
+              {index === 0 && (
+                <Box
+                  sx={{
+                    display: "flex",
+                    width: "100%",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Box sx={{ marginTop: '-5px'}} className="marginLine">
+                    <LineRight width={"60%"} />
+                  </Box>
+                  <Box id="projects" className="titleContents">
+                    PROJETOS<strong className="pointStyle">.</strong>
+                  </Box>
+                </Box>
+              )}
+              <Box sx={{ margin: "auto" }}>
+                <Box className="terminalView">
+                  <Box
+                    sx={{
+                      width: "100%",
+                      margin: "15px 0px ",
+                    }}
+                  >
+                    <Box
+                      sx={{ transform: "scale(0.8)", position: "absolute" }}
+                      className="buttonsTerminal"
+                    />
+                    <Box className="titleProject">{project.title}</Box>
+                  </Box>
+                  <Box
+                    sx={{ direction: "ltr" }}
+                    className={`imgTerminal ${project.imgClass}`}
+                  />
+                </Box>
+                <Box className="describeProject">{project.describe}</Box>
+              </Box>
+              {/* <Box
+                sx={{
+                  width: "50%",
+                  maxHeight: "400px",
+                  overflow: "auto",
+                  margin: "0px 30px",
+                }}
+              >
+                <Box
+                  sx={{
+                    
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: `${leftOrRight(index).justify}`,
+                  }}
+                  className="titleProject"
+                >
+                  {project.title}
+                  <strong className="pointStyle">.</strong>
+                </Box>
+              </Box> */}
             </Box>
-            <Box className="describeProject">{project.describe}</Box>
           </Box>
-        </Box>
+        </>
       ))}
       <Box className="comingSoon">
         EM BREVE<strong className="pointStyle">.</strong>
@@ -75,6 +97,6 @@ export function ContentProject() {
       <Box className="marginLine">
         <LineLeft width={"60%"} />
       </Box>
-    </Box>
+    </>
   );
 }

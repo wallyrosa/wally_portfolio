@@ -1,36 +1,35 @@
 import { Box } from "@mui/material";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Cursor } from "react-simple-typewriter";
+import { useEffect, useState } from 'react';
+import { typeWriter } from "../../../hooks/typeWriter";
+import { TypeWriter } from "../../../common/TypeWriter";
 
 export function Terminal() {
-  const hellow = useTypewriter({
-    words: ['Olá, tudo bem?'],
-    loop: undefined,
-    typeSpeed: 50
-  })
-  const myNameIs = useTypewriter({
-    words: ["              meu nome é"],
-    loop: undefined,
-    typeSpeed: 50,
-  });
-  const name = useTypewriter({
-    
-    // eslint-disable-next-line no-template-curly-in-string
-    words: ["                        ${Wallysson}ㅤㅤ"],
-    loop: undefined,
-    typeSpeed: 50,
-  });
-  const welcome = useTypewriter({
-    words: ["                                     bem vindo ao meu portfólio :)"],
-    loop: undefined,
-    typeSpeed: 50,
-  });
+  const [activeButton, setActiveButton] = useState(true);
+
+  useEffect(() => {
+    typeWriter(document.querySelector("#typing"));
+  }, []);
+  
   return (
     <Box className="terminal">
       <Box className="topTerminal">
         <Box className="buttonsTerminal" />
-        <button className="buttonAbaTerminal">~/welcome</button>
-        <button className="buttonAbaTerminal">~/about_me</button>
-        <button className="moreButton"></button>
+        <button
+          className={`buttonAbaTerminal ${activeButton ? "active" : ""}`}
+          onClick={() => setActiveButton(!activeButton)}
+        >
+          ~/welcome
+        </button>
+        <button
+          className={`buttonAbaTerminal ${!activeButton ? "active" : ""}`}
+          onClick={() => setActiveButton(!activeButton)}
+        >
+          ~/about_me
+        </button>
+        <a className="moreButton" href="#skills">
+          <></>
+        </a>
       </Box>
       <Box className="contentTerminal">
         <Box className="columnNumber">
@@ -40,14 +39,25 @@ export function Terminal() {
           <ul>4</ul>
           <ul>5</ul>
         </Box>
-        <Box className="textAreaTerminal">
-          <strong className="titleTerminal">{"wally@wally: ~$ "}</strong>
-          {hellow[0]}
-          {myNameIs[0]}
-          <strong className="nameTerminal">{name[0]}</strong>
-          {welcome[0]}
-          <Cursor />
-        </Box>
+        {activeButton ? (
+          <Box className="textAreaTerminal">
+            <strong className="titleTerminal">{"wally@wally: ~$ "}</strong>
+            <TypeWriter>
+              Olá, tudo bem?
+              Meu nome é Wallysson e sou desenvolvedor Frontend
+            </TypeWriter>
+            <Cursor />
+          </Box>
+        ) : (
+          <Box className="textAreaTerminal">
+            <strong className="titleTerminal">{"wally@wally: ~$ "}</strong>
+            <TypeWriter>
+              Meu nome é Wallysson sou dev Frontend, tenho experiência atual de
+              2 anos como dev e experiência em trabalhar em projetos com metodos
+              ágeis como Scrum e Kanban.
+            </TypeWriter>
+          </Box>
+        )}
       </Box>
     </Box>
   );
