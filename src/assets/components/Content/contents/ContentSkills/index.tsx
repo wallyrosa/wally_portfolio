@@ -20,7 +20,7 @@ export function ContentSkills() {
               <CardSkill key={index} icon={card.icon} name={card.name} />
             ))}
           </Box>
-          <Box sx={{ margin: "20px 0px" }} className="subTitleContents">
+          <Box className="subTitleContents">
             Em Desenvolvimento
           </Box>
           <Box className="skillsAvancadas">

@@ -19,9 +19,6 @@ html {
     scroll-behavior: smooth;
     overflow-y: auto;
     scrollbar-width: none;
-    &::--webkit-scrollbar{
-        display: none;
-    }
 }
 
 body {
@@ -202,7 +199,7 @@ body {
     @media (max-width: 1600px) {
         top: 400px;
         height: 120px;
-    }
+    };
 }
 
 .contentTerminalSmall {
@@ -344,7 +341,7 @@ body {
         width: 450px;
         height: 450px;
         background-size: 450px 450px;
-    }
+    };
 }
 
 .perfilImg {
@@ -358,7 +355,7 @@ body {
         width: 100%;
         height: 485px;
         background-size: 485px 485px;
-    }
+    };
 }
 
 .circlePerfil {
@@ -383,7 +380,7 @@ body {
         width: 80px;
         height: 80px;
         background-size: 80px 80px;
-    }
+    };
 }
 
 .linkedin_icon {
@@ -395,7 +392,7 @@ body {
         width: 80px;
         height: 80px;
         background-size: 80px 80px;
-    }
+    };
 }
 
 .wpp_icon {
@@ -407,7 +404,7 @@ body {
         width: 80px;
         height: 80px;
         background-size: 80px 80px;
-    }
+    };
 }
 
 .lineTip {
@@ -456,7 +453,6 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0px 0px 15px 0px;
 }
 
 .subTitleContents {
@@ -466,7 +462,7 @@ body {
     font-style: normal;
     font-weight: 275;
     line-height: normal;
-    margin-bottom: 20px;
+    margin: 20px 0px;
 }
 
 .pointStyle {
@@ -479,7 +475,7 @@ body {
 
 .skillsAvancadas {
     width: 80%;
-    height: auto;
+    height: 150px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -591,8 +587,8 @@ body {
 }
 
 .terminalView {
-    width: 450px;
-    height: 300px;
+    width: 750px;
+    height: 490px;
     background: var(--gradient-terminal);
     border-radius: 20px;
     box-shadow: 0px 0px 40px 0px #000000b3;
@@ -600,6 +596,18 @@ body {
     align-items: center;
     flex-direction: column;
     margin: auto;
+    @media (max-width: 1600px) {
+        width: 450px;
+        height: 300px;
+    };
+}
+
+.wrapperProject {
+    display: flex;
+    height: 490px;
+    @media (max-width: 1600px) {
+        height: 300px;
+    };
 }
 
 .titleProject {
@@ -613,6 +621,30 @@ body {
     justify-content: center;
     align-content: center;
     width: 100%;
+    @media (max-width: 1600px) {
+        font-size: 25px;
+    }
+}
+
+.leftTec {
+    width: 90px;
+    max-height: 100%;
+    border-right: 8px solid var(--terminal-theme);
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.RightTec {
+    width: 90px;
+    max-height: 100%;
+    border-left: 8px solid var(--terminal-theme);
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .comingSoon {
@@ -690,20 +722,24 @@ body {
 .describeProject {
     color: var(--font-color-main);
     font-family: 'Jura';
-    width: 635px;
+    width: 940px;
+    height: 225px;
     overflow: auto;
-    height: 185px;
-    border: 1px solid red;
     font-size: 1.8rem;
+    text-align: center;
     font-style: normal;
     font-weight: 300;
     margin-top: 25px;
     line-height: 150%;
+    @media (max-width: 1600px) {
+        width: 635px;
+        height: 185px;
+    };
 }
 
 .imgTerminal {
-    width: 90%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
 }
 
@@ -837,19 +873,9 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--white-color-25);
-    border-radius: 8px;
+    display: none;
 }
 
 scrollbar {
-    width: 12px;
-}
-
-scrollbar-thumb {
-    background-color: var(--white-color-25);
-    border-radius: 8px;
+    display: none;
 }
