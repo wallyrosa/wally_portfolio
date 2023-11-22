@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import { LineRight } from "../../../../common/lines/LineRight";
 import { LineLeft } from "../../../../common/lines/LineLeft";
-import { CardSkill } from "../../../../common/CardSkill";
-import { cardsAvancados, cardsDesenvolvimento } from "./cards/intex";
+import { CardSkill } from "../../../../common/cards/CardSkill";
+import { cardsAvancados, cardsDesenvolvimento } from "./cards";
 
 export function ContentSkills() {
     return (

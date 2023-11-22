@@ -19,7 +19,7 @@ export const styleCard = (icon: string) => {
         case 'vue':
             color = "#41B883";
             break;
-        case 'material-ui':
+        case 'material_ui':
             color = "#3A7EF9";
             break;
         case 'figma':

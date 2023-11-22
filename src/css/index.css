@@ -2,7 +2,7 @@
     --font-color-main: #f0f8ff;
     --border-color-main: #000;
     --border-color-main-25: #00000040;
-    --background-main: #100d16;
+    --background-main: #110025;
     --primary-pink: #76108c;
     --primary-blue: #1B08C4;
     --primary-purple: #210240;
@@ -473,6 +473,16 @@ body {
     line-height: normal;
 }
 
+.imgCardTech {
+    width: 80%;
+    min-height: 50px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    transition: all 0.4s;
+}
+
 .skillsAvancadas {
     width: 80%;
     height: 150px;
@@ -507,8 +517,8 @@ body {
 }
 
 .cardBorder {
-    width: 100%;
-    height: auto;
+    width: 120px;
+    height: 120px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -544,46 +554,46 @@ body {
 
 .html {
     background-image: url('../assets/imgs/icons/html5_icon.svg');
-    background-size: 64px 76px;
+    background-size: contain;
 }
 
 .react {
     background-image: url('../assets/imgs/icons/react_icon.svg');
-    background-size: 85px 76px;
+    background-size: contain;
 }
 
 .javascript {
     background-image: url('../assets/imgs/icons/js_icon.svg');
-    background-size: 76px 76px;
+    background-size: contain;
 }
 
 .typescript {
     background-image: url('../assets/imgs/icons/typescript_icon.svg');
-    background-size: 76px 76px;
+    background-size: contain;
 }
 
 .css {
     height: 100%;
     background-image: url('../assets/imgs/icons/css_icon.svg');
-    background-size: 64px 76px;
+    background-size: contain;
 }
 
 .vue {
     height: 100%;
     background-image: url('../assets/imgs/icons/vue_icon.svg');
-    background-size: 80px 76px;
+    background-size: contain;
 }
 
-.material-ui {
+.material_ui {
     height: 100%;
     background-image: url('../assets/imgs/icons/material_ui_icon.svg');
-    background-size: 86px 86px;
+    background-size: contain;
 }
 
 .figma {
     height: 100%;
     background-image: url('../assets/imgs/icons/figma_icon.svg');
-    background-size: 44px 76px;
+    background-size: contain;
 }
 
 .terminalView {
@@ -626,7 +636,7 @@ body {
     }
 }
 
-.leftTec {
+.leftTech {
     width: 90px;
     max-height: 100%;
     border-right: 8px solid var(--terminal-theme);
@@ -635,8 +645,11 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 0px 20px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-.RightTec {
+.rightTech {
     width: 90px;
     max-height: 100%;
     border-left: 8px solid var(--terminal-theme);
@@ -645,6 +658,14 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 0px 0px 0px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    direction: rtl;
+}
+
+.rightTech::-webkit-scrollbar, .leftTech::-webkit-scrollbar {
+    width: 4px;
 }
 
 .comingSoon {
@@ -735,6 +756,10 @@ body {
         width: 635px;
         height: 185px;
     };
+}
+
+.describeProject::-webkit-scrollbar {
+    width: 12px;
 }
 
 .imgTerminal {
@@ -873,9 +898,19 @@ body {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--white-color-25);
+    border-radius: 8px;
 }
 
 scrollbar {
-    display: none;
+    width: 0px;
+}
+
+scrollbar-thumb {
+    background-color: var(--white-color-25);
+    border-radius: 8px;
 }

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { styleCard } from "./styleCard";
+import { styleCard } from "../styleCard";
 
 interface CardSkillProps {
   icon: string
@@ -17,7 +17,9 @@ export function CardSkill(props: CardSkillProps) {
         }}
         className="cardBorder"
       >
-        <Box className={`icon ${props.icon}`} />
+        <Box sx={{ width: "70%" }}>
+          <Box className={`icon ${props.icon}`} />
+        </Box>
       </Box>
       <div className="textCard">{props.name}</div>
       <div className="lineCard"></div>

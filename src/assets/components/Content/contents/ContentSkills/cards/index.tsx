@@ -26,7 +26,7 @@ export const cardsDesenvolvimento = [
     name: "vue",
   },
   {
-    icon: "material-ui",
+    icon: "material_ui",
     name: "material ui",
   },
   {

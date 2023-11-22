@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { LineRight } from "../../../../common/lines/LineRight";
 import { LineLeft } from "../../../../common/lines/LineLeft";
 import { projects } from "./projects";
+import { CardTech } from "../../../../common/cards/CardTech";
 
 export function ContentProject() {
   
@@ -47,7 +48,16 @@ export function ContentProject() {
                 }}
               >
                 <Box className="wrapperProject">
-                  <Box className="leftTec">
+                  <Box className="leftTech">
+                    <Box sx={{height: '100%'}}>
+                      <CardTech name="material ui" icon="material_ui" />
+                      <CardTech name="typescript" icon="typescript" />
+                      <CardTech name="figma" icon="figma" />
+                      <CardTech name="figma" icon="figma" />
+                      <CardTech name="figma" icon="figma" />
+                      <CardTech name="figma" icon="figma" />
+                      <CardTech name="figma" icon="figma" />
+                    </Box>
                   </Box>
                   <Box className="terminalView">
                     <Box
@@ -79,7 +89,15 @@ export function ContentProject() {
                       />
                     </Box>
                   </Box>
-                  <Box className="RightTec"></Box>
+                  <Box className="rightTech">
+                    <Box sx={{height: '100%'}}>
+                      <CardTech name="material ui" icon="material_ui" />
+                      <CardTech name="javascript" icon="javascript" />
+                      <CardTech name="figma" icon="figma" />
+                      <CardTech name="typescript" icon="typescript" />
+                      <CardTech name="typescript" icon="typescript" />
+                    </Box>
+                  </Box>
                 </Box>
                 <Box className="describeProject">{project.describe}</Box>
               </Box>
