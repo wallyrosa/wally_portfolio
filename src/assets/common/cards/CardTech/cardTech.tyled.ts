@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 interface syledCardTechProps {
-    color: string
+    color: string;
+    scale?: string;
 }
 export const syledCardTech = (props: syledCardTechProps) => {
+    console.log('scale: ', props.scale)
 
     const CardTech = styled.div`
         width: 60px;
@@ -11,6 +13,9 @@ export const syledCardTech = (props: syledCardTechProps) => {
         display: flex;
         flex-direction: column;
         align-items: center;
+        cursor: pointer;
+        margin: 10px 0px;
+        transform: scale(${props?.scale ? props.scale : '1'});
         @media (max-width: 1600px) {
         width: 30px
         }

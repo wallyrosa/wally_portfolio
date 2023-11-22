@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
-import { styleCard } from "../styleCard";
+import { colorCard } from "../colorCard";
 
 interface CardSkillProps {
   icon: string
   name: string
 }
 export function CardSkill(props: CardSkillProps) {
-  const color = styleCard(props.icon)
+  const color = colorCard(props.icon);
 
   return (
     <Box className="card">

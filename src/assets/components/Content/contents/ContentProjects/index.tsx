@@ -3,6 +3,8 @@ import { LineRight } from "../../../../common/lines/LineRight";
 import { LineLeft } from "../../../../common/lines/LineLeft";
 import { projects } from "./projects";
 import { CardTech } from "../../../../common/cards/CardTech";
+import ScreenShareIcon from "@mui/icons-material/ScreenShare";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export function ContentProject() {
   
@@ -49,14 +51,14 @@ export function ContentProject() {
               >
                 <Box className="wrapperProject">
                   <Box className="leftTech">
-                    <Box sx={{height: '100%'}}>
-                      <CardTech name="material ui" icon="material_ui" />
-                      <CardTech name="typescript" icon="typescript" />
-                      <CardTech name="figma" icon="figma" />
-                      <CardTech name="figma" icon="figma" />
-                      <CardTech name="figma" icon="figma" />
-                      <CardTech name="figma" icon="figma" />
-                      <CardTech name="figma" icon="figma" />
+                    <Box className="wrapperCard">
+                      <CardTech icon="screenShare" name="projeto">
+                        <ScreenShareIcon className="screenShare" />
+                      </CardTech>
+                      <CardTech icon="figma" name="Protótipo" />
+                      <CardTech name="Github" onClick={() => console.log('deu certo')}>
+                        <GitHubIcon />
+                      </CardTech>
                     </Box>
                   </Box>
                   <Box className="terminalView">
@@ -90,9 +92,10 @@ export function ContentProject() {
                     </Box>
                   </Box>
                   <Box className="rightTech">
-                    <Box sx={{height: '100%'}}>
+                    <Box className="wrapperCard">
                       <CardTech name="material ui" icon="material_ui" />
                       <CardTech name="javascript" icon="javascript" />
+                      <CardTech name="figma" icon="figma" />
                       <CardTech name="figma" icon="figma" />
                       <CardTech name="typescript" icon="typescript" />
                       <CardTech name="typescript" icon="typescript" />

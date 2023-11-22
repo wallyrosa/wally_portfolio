@@ -14,9 +14,9 @@
 }
 
 html {
+    scroll-behavior: smooth;
     height: 100vh;
     scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
     overflow-y: auto;
     scrollbar-width: none;
 }
@@ -596,6 +596,21 @@ body {
     background-size: contain;
 }
 
+.github {
+    color: #fff;
+    font-size: 30px !important;
+}
+
+.linkedin {
+    color: #2f68c0;
+    font-size: 30px !important;
+}
+
+.whatsapp {
+    color: #70e773;
+    font-size: 30px !important;
+}
+
 .terminalView {
     width: 750px;
     height: 490px;
@@ -620,6 +635,14 @@ body {
     };
 }
 
+.wrapperCard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .titleProject {
     color: var(--font-color-main);
     font-family: 'Bai Jamjuree';
@@ -637,7 +660,7 @@ body {
 }
 
 .leftTech {
-    width: 90px;
+    width: 100px;
     max-height: 100%;
     border-right: 8px solid var(--terminal-theme);
     margin-right: 30px;
@@ -645,12 +668,12 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 0px 20px 0px 0px;
+    padding: 0px 15px 0px 0px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 .rightTech {
-    width: 90px;
+    width: 100px;
     max-height: 100%;
     border-left: 8px solid var(--terminal-theme);
     margin-left: 30px;
@@ -658,14 +681,18 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 0px 0px 0px 20px;
+    padding: 0px 0px 0px 15px;
     overflow-x: hidden;
     overflow-y: auto;
     direction: rtl;
 }
 
 .rightTech::-webkit-scrollbar, .leftTech::-webkit-scrollbar {
-    width: 4px;
+    width: 5px;
+}
+
+.screenShare {
+    color: #55be5a;
 }
 
 .comingSoon {

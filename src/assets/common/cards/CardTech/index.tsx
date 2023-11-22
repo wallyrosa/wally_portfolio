@@ -1,20 +1,26 @@
 import { Box } from "@mui/material";
-import { styleCard } from "../styleCard";
+import { colorCard } from "../colorCard";
 import { syledCardTech } from "./cardTech.tyled";
+import { ReactNode } from "react";
 
 interface CardTechProps {
-    name: string
-    icon: string
+  name?: string;
+  icon?: string;
+  children?: ReactNode;
+  onClick?: () => void;
+  scale?: string;
 }
 export function CardTech(props: CardTechProps) {
-    const color = styleCard(props.icon);
-    const styled = syledCardTech({color})
+    const color = colorCard(props?.icon);
+    const styled = syledCardTech({ color, scale: props?.scale });
     return (
-      <styled.CardTech>
+      <styled.CardTech onClick={props?.onClick}>
         <styled.WrapperCard>
-          <Box className={`imgCardTech ${props.icon}`} />
+          {props.children ? props.children : (
+            <Box className={`imgCardTech ${props?.icon}`} />
+          )}
         </styled.WrapperCard>
-        <styled.NameCardTech>{props.name}</styled.NameCardTech>
+        <styled.NameCardTech>{props?.name}</styled.NameCardTech>
       </styled.CardTech>
     );
 }

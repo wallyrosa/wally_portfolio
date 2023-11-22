@@ -1,4 +1,4 @@
-export const styleCard = (icon: string) => {
+export const colorCard = (icon?: string) => {
     let color;
     switch (icon) {
         case 'html':
@@ -24,6 +24,18 @@ export const styleCard = (icon: string) => {
             break;
         case 'figma':
             color = "#A259FF";
+            break;
+        case 'screenShare':
+            color = "#55be5a";
+            break;
+        case 'github':
+            color = "#fff";
+            break;
+        case 'linkedin':
+            color = "#2f68c0";
+            break;
+        case 'whatsapp':
+            color = "#70e773";
             break;
         default:
             color = "#fff";
