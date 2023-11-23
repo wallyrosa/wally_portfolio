@@ -10,9 +10,10 @@ interface CardTechProps {
   onClick?: () => void;
   scale?: string;
 }
+
 export function CardTech(props: CardTechProps) {
-    const color = colorCard(props?.icon);
-    const styled = syledCardTech({ color, scale: props?.scale });
+    const {color, gradient} = colorCard(props?.icon);
+    const styled = syledCardTech({ color, scale: props?.scale, gradient });
     return (
       <styled.CardTech onClick={props?.onClick}>
         <styled.WrapperCard>

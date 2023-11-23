@@ -6,13 +6,16 @@ interface CardSkillProps {
   name: string
 }
 export function CardSkill(props: CardSkillProps) {
-  const color = colorCard(props.icon);
+  const {color, gradient} = colorCard(props.icon);
 
   return (
     <Box className="card">
       <Box
         sx={{
-          border: `10px solid ${color}`,
+          borderWidth: "10px",
+          borderStyle: "solid",
+          borderColor: `${color}`,
+          borderImage: `${gradient}`,
           boxShadow: `0px 0px 10px 0px ${color}`,
         }}
         className="cardBorder"

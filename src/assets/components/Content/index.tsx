@@ -9,7 +9,7 @@ export function Content() {
     return (
       <>
         <Box className="container">
-          <Box className="fullScreen" sx={{ scrollSnapAlign: "center" }}>
+          <Box className="fullScreen" sx={{ scrollSnapAlign: "start" }}>
             <Header />
             <ContentMain />
           </Box>
@@ -17,7 +17,7 @@ export function Content() {
           <ContentProject />
           <BackToTop />
         </Box>
-        
+
         <footer className="footer"></footer>
       </>
     );

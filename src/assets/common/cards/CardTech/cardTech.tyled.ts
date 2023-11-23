@@ -3,9 +3,9 @@ import styled from "styled-components";
 interface syledCardTechProps {
     color: string;
     scale?: string;
+    gradient?: string;
 }
 export const syledCardTech = (props: syledCardTechProps) => {
-    console.log('scale: ', props.scale)
 
     const CardTech = styled.div`
         width: 60px;
@@ -16,6 +16,10 @@ export const syledCardTech = (props: syledCardTechProps) => {
         cursor: pointer;
         margin: 10px 0px;
         transform: scale(${props?.scale ? props.scale : '1'});
+        transition: all 0.2s;
+        &:hover {
+            transform: scale(${props?.scale ? parseFloat(props.scale) + 0.1 : '1.1'})
+        }
         @media (max-width: 1600px) {
         width: 30px
         }
@@ -23,16 +27,22 @@ export const syledCardTech = (props: syledCardTechProps) => {
     const WrapperCard = styled.div`
         width: 60px;
         height: 60px;
-        border: solid 5px ${props.color};
+        border-width: 5px;
+        border-style: solid;
+        border-color: ${props.color};
+        border-image: ${props.gradient};
         box-shadow: 0px 0px 3px 0px ${props.color};
         display: flex;
         align-items: center;
         justify-content: center;
         @media (max-width: 1600px) {
-        width: 40px;
-        height: 40px;
-        border: solid 3px ${props.color};
-        box-shadow: 0px 0px 3px 0px ${props.color};
+            width: 40px;
+            height: 40px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: ${props.color};
+            border-image: ${props.gradient};
+            box-shadow: 0px 0px 3px 0px ${props.color};
         }
     `;
     const NameCardTech = styled.div`

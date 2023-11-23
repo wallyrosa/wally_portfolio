@@ -3,6 +3,7 @@ import { Cursor } from "react-simple-typewriter";
 import { useEffect, useState } from 'react';
 import { typeWriter } from "../../../hooks/typeWriter";
 import { TypeWriter } from "../../../common/TypeWriter";
+import { ButtonsTerminal } from "../../../common/buttons/ButtonsTerminal";
 
 export function Terminal() {
   const [activeButton, setActiveButton] = useState(true);
@@ -14,7 +15,7 @@ export function Terminal() {
   return (
     <Box className="terminal">
       <Box className="topTerminal">
-        <Box className="buttonsTerminal" />
+        <ButtonsTerminal />
         <button
           className={`buttonAbaTerminal ${activeButton ? "active" : ""}`}
           onClick={() => setActiveButton(!activeButton)}
@@ -41,16 +42,15 @@ export function Terminal() {
         </Box>
         {activeButton ? (
           <Box className="textAreaTerminal">
-            <strong className="titleTerminal">{"wally@wally: ~$ "}</strong>
+            <p className="titleTerminal">{"wally@wally: ~$ "}</p>
             <TypeWriter>
-              Olá, tudo bem?
-              Meu nome é Wallysson e sou desenvolvedor Frontend
+              Olá, tudo bem? Meu nome é Wallysson e sou desenvolvedor Frontend
             </TypeWriter>
             <Cursor />
           </Box>
         ) : (
           <Box className="textAreaTerminal">
-            <strong className="titleTerminal">{"wally@wally: ~$ "}</strong>
+            <p className="titleTerminal">{"wally@wally: ~$ "}</p>
             <TypeWriter>
               Meu nome é Wallysson sou dev Frontend, tenho experiência atual de
               2 anos como dev e experiência em trabalhar em projetos com metodos

@@ -1,4 +1,4 @@
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandLessRoundedIcon from "@mui/icons-material/ExpandLessRounded";
 import { useEffect, useState } from "react";
 
 export function BackToTop() {
@@ -34,7 +34,7 @@ export function BackToTop() {
       className={`backToTop ${showButton ? "show" : "hidden"}`}
       onClick={scrollTop}
     >
-      <ExpandLessIcon sx={{ fontSize: "50px" }} />
+      <ExpandLessRoundedIcon sx={{ fontSize: "75px" }} />
     </div>
   );
 }

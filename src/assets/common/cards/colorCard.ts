@@ -1,5 +1,6 @@
 export const colorCard = (icon?: string) => {
     let color;
+    let gradient;
     switch (icon) {
         case 'html':
             color = "#F16E38";
@@ -23,22 +24,24 @@ export const colorCard = (icon?: string) => {
             color = "#3A7EF9";
             break;
         case 'figma':
+            gradient = "linear-gradient(to bottom, rgba(242, 78, 30, 1), rgba(162, 89, 255, 1), rgba(10, 207, 131, 1), rgba(26, 188, 254, 1)) 1";
             color = "#A259FF";
             break;
         case 'screenShare':
             color = "#55be5a";
             break;
         case 'github':
-            color = "#fff";
+            color = "var(--red-color)";
             break;
         case 'linkedin':
-            color = "#2f68c0";
+            color = "var(--yellow-color)";
             break;
         case 'whatsapp':
-            color = "#70e773";
+            color = "var(--green-color)";
             break;
         default:
             color = "#fff";
+            gradient = "none";
     }
-    return color;
+    return {color, gradient};
 }

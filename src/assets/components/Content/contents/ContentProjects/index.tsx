@@ -5,6 +5,7 @@ import { projects } from "./projects";
 import { CardTech } from "../../../../common/cards/CardTech";
 import ScreenShareIcon from "@mui/icons-material/ScreenShare";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { ButtonsTerminal } from "../../../../common/buttons/ButtonsTerminal";
 
 export function ContentProject() {
   
@@ -19,7 +20,7 @@ export function ContentProject() {
                 height: "100vh",
                 alignItems: "center",
                 justifyContent: "center",
-                scrollSnapAlign: "center",
+                scrollSnapAlign: "start",
                 flexDirection: "column",
               }}
               key={index}
@@ -36,10 +37,12 @@ export function ContentProject() {
                     <LineRight width={"60%"} />
                   </Box>
                   <Box id="projects" className="titleContents">
-                    PROJETOS<strong className="pointStyle">.</strong>
+                    PROJETOS<strong>.</strong>
                   </Box>
                 </Box>
               )}
+              <Box className="circleProject" />
+              <Box className="circleProject2" />
               <Box
                 sx={{
                   margin: "auto",
@@ -56,8 +59,13 @@ export function ContentProject() {
                         <ScreenShareIcon className="screenShare" />
                       </CardTech>
                       <CardTech icon="figma" name="Protótipo" />
-                      <CardTech name="Github" onClick={() => console.log('deu certo')}>
-                        <GitHubIcon />
+                      <CardTech
+                        name="Github"
+                        onClick={() =>
+                          window.open("https://github.com/wallyrosa", "_blank")
+                        }
+                      >
+                        <GitHubIcon className="githubIcon" />
                       </CardTech>
                     </Box>
                   </Box>
@@ -79,10 +87,7 @@ export function ContentProject() {
                           margin: "2% 0px ",
                         }}
                       >
-                        <Box
-                          sx={{ transform: "scale(0.8)", position: "absolute" }}
-                          className="buttonsTerminal"
-                        />
+                        <ButtonsTerminal style={{ position: "absolute" }} />
                         <Box className="titleProject">{project.title}</Box>
                       </Box>
                       <Box
@@ -108,11 +113,14 @@ export function ContentProject() {
           </Box>
         </>
       ))}
-      <Box className="comingSoon">
-        EM BREVE<strong className="pointStyle">.</strong>
-      </Box>
-      <Box className="marginLine">
+      <Box sx={{ scrollSnapAlign: "start", height: '80vh' }} className="fullScreen comingSoon">
+        <Box></Box>
+        <Box>
+          EM BREVE<strong>.</strong>
+        </Box>
+      <Box sx={{bottom: "0"}} className="marginLine">
         <LineLeft width={"60%"} />
+      </Box>
       </Box>
     </>
   );
