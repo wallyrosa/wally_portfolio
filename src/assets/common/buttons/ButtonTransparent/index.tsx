@@ -5,7 +5,7 @@ interface ButtonTransparentProps {
     width?: string
     height?: string
     children?: ReactNode
-    href: string
+  to: string;
 }
 
 export function ButtonTransparent(props: ButtonTransparentProps) {
@@ -13,14 +13,24 @@ export function ButtonTransparent(props: ButtonTransparentProps) {
         width: `${props?.width ? props?.width : '100px'}`,
         height: `${props?.height ? props?.height : '35px'}`
     }
+    
+    function scrollToSection(elementId: any) {
+      var element = document.querySelector(elementId);
+
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop
+        });
+      }
+    }
     return (
-      <a
+      <div
+        id="anchor"
         style={style}
-        onClick={props?.onClick}
+        onClick={() => scrollToSection(props?.to)}
         className="buttonTransparent"
-        href={props.href}
       >
         {props?.children}
-      </a>
+      </div>
     );
 }

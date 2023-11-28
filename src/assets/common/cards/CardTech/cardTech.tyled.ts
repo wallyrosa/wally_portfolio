@@ -31,7 +31,7 @@ export const syledCardTech = (props: syledCardTechProps) => {
         border-style: solid;
         border-color: ${props.color};
         border-image: ${props.gradient};
-        box-shadow: 0px 0px 3px 0px ${props.color};
+        box-shadow: 0px 0px 10px 0px ${props.color};
         display: flex;
         align-items: center;
         justify-content: center;

@@ -55,14 +55,26 @@ export function ContentProject() {
                 <Box className="wrapperProject">
                   <Box className="leftTech">
                     <Box className="wrapperCard">
-                      <CardTech icon="screenShare" name="projeto">
+                      <CardTech
+                        icon="screenShare"
+                        name="projeto"
+                        onClick={() =>
+                          window.open(project.view_project, "_blank")
+                        }
+                      >
                         <ScreenShareIcon className="screenShare" />
                       </CardTech>
-                      <CardTech icon="figma" name="Protótipo" />
+                      <CardTech
+                        icon="figma"
+                        name="Protótipo"
+                        onClick={() =>
+                          window.open(project.figma_link, "_blank")
+                        }
+                      />
                       <CardTech
                         name="Github"
                         onClick={() =>
-                          window.open("https://github.com/wallyrosa", "_blank")
+                          window.open(project.github_link, "_blank")
                         }
                       >
                         <GitHubIcon className="githubIcon" />
@@ -98,12 +110,13 @@ export function ContentProject() {
                   </Box>
                   <Box className="rightTech">
                     <Box className="wrapperCard">
-                      <CardTech name="material ui" icon="material_ui" />
-                      <CardTech name="javascript" icon="javascript" />
-                      <CardTech name="figma" icon="figma" />
-                      <CardTech name="figma" icon="figma" />
-                      <CardTech name="typescript" icon="typescript" />
-                      <CardTech name="typescript" icon="typescript" />
+                      {project.tech?.map((card, index) => (
+                        <CardTech
+                          key={index}
+                          name={card.name}
+                          icon={card.icon}
+                        />
+                      ))}
                     </Box>
                   </Box>
                 </Box>
@@ -113,14 +126,17 @@ export function ContentProject() {
           </Box>
         </>
       ))}
-      <Box sx={{ scrollSnapAlign: "start", height: '80vh' }} className="fullScreen comingSoon">
+      <Box
+        sx={{ scrollSnapAlign: "start", height: "80vh" }}
+        className="fullScreen comingSoon"
+      >
         <Box></Box>
         <Box>
           EM BREVE<strong>.</strong>
         </Box>
-      <Box sx={{bottom: "0"}} className="marginLine">
-        <LineLeft width={"60%"} />
-      </Box>
+        <Box sx={{ bottom: "0" }} className="marginLine">
+          <LineLeft width={"60%"} />
+        </Box>
       </Box>
     </>
   );

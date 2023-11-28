@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import { ContentSkills } from "./contents/ContentSkills";
 import { ContentProject } from "./contents/ContentProjects";
 import { BackToTop } from "../../common/BackToTop";
+import { Footer } from "../Footer";
 
 export function Content() {
     return (
@@ -17,8 +18,7 @@ export function Content() {
           <ContentProject />
           <BackToTop />
         </Box>
-
-        <footer className="footer"></footer>
+        <Footer />
       </>
     );
 }
