@@ -59,7 +59,7 @@ strong {
 .logo {
     width: 32px;
     height: 32px;
-    background-image: url(../../public/favicon.ico);
+    background-image: url(../../public/favicon.png);
     background-position: center;
     background-size: 32px 32px;
 }
