@@ -205,10 +205,6 @@ strong {
     position: relative;
     float: right;
     top: 600px;
-    @media (max-width: 1600px) {
-        top: 400px;
-        height: 120px;
-    };
 }
 
 .contentTerminalSmall {
@@ -406,11 +402,12 @@ strong {
 
 .contentMain {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: auto;
+    flex-direction: row;
+    
 }
 
 .backPerfil {
@@ -418,11 +415,6 @@ strong {
     height: 700px;
     background-image: url(../assets/imgs/icons/back_perfil.svg);
     background-size: 700px 700px;
-    @media (max-width: 1600px) {
-        width: 450px;
-        height: 450px;
-        background-size: 450px 450px;
-    };
 }
 
 .perfilImg {
@@ -432,11 +424,6 @@ strong {
     background-size: 735px 735px;
     position: relative;
     top: -70px;
-    @media (max-width: 1600px) {
-        width: 100%;
-        height: 485px;
-        background-size: 485px 485px;
-    };
 }
 
 .circlePerfil {
@@ -457,11 +444,6 @@ strong {
     height: 100px;
     background-image: url(../assets/imgs/icons/gitlab_button.svg);
     background-size: 100px 100px;
-    @media (max-width: 1600px) {
-        width: 80px;
-        height: 80px;
-        background-size: 80px 80px;
-    };
 }
 
 .linkedin_icon {
@@ -469,11 +451,6 @@ strong {
     height: 100px;
     background-image: url(../assets/imgs/icons/linkedin_button.svg);
     background-size: 100px 100px;
-    @media (max-width: 1600px) {
-        width: 80px;
-        height: 80px;
-        background-size: 80px 80px;
-    };
 }
 
 .wpp_icon {
@@ -481,11 +458,6 @@ strong {
     height: 100px;
     background-image: url(../assets/imgs/icons/wpp_button.svg);
     background-size: 100px 100px;
-    @media (max-width: 1600px) {
-        width: 80px;
-        height: 80px;
-        background-size: 80px 80px;
-    };
 }
 
 .lineTip {
@@ -672,25 +644,16 @@ strong {
 .github {
     color: var(--red-color);
     font-size: 40px !important;
-    @media (max-width: 1600px) {
-        font-size: 30px !important;
-    };
 }
 
 .linkedin {
     color: var(--yellow-color);
     font-size: 40px !important;
-    @media (max-width: 1600px) {
-        font-size: 30px !important;
-    };
 }
 
 .whatsapp {
     color: var(--green-color);
     font-size: 40px !important;
-    @media (max-width: 1600px) {
-        font-size: 30px !important;
-    };
 }
 
 .terminalView {
@@ -703,18 +666,11 @@ strong {
     align-items: center;
     flex-direction: column;
     margin: auto;
-    @media (max-width: 1600px) {
-        width: 450px;
-        height: 300px;
-    };
 }
 
 .wrapperProject {
     display: flex;
     height: 490px;
-    @media (max-width: 1600px) {
-        height: 300px;
-    };
 }
 
 .wrapperCard {
@@ -736,9 +692,6 @@ strong {
     justify-content: center;
     align-content: center;
     width: 100%;
-    @media (max-width: 1600px) {
-        font-size: 25px;
-    }
 }
 
 .leftTech {
@@ -777,16 +730,10 @@ strong {
 .screenShare {
     color: #55be5a;
     font-size: 35px !important;
-    @media (max-width: 1600px) {
-        font-size: 1.5rem !important;
-    }
 }
 .githubIcon {
     color: #fff;
     font-size: 35px !important;
-    @media (max-width: 1600px) {
-        font-size: 1.5rem !important;
-    }
 }
 
 .comingSoon {
@@ -861,10 +808,6 @@ strong {
     font-weight: 300;
     margin-top: 25px;
     line-height: 150%;
-    @media (max-width: 1600px) {
-        max-width: 635px;
-        max-height: 185px;
-    };
 }
 
 .describeProject::-webkit-scrollbar {
@@ -912,6 +855,13 @@ strong {
     color: var(--terminal-theme);
     font-size: 40px;
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .backToTop {
+        width: 100px !important;
+        height: 100px;
+    }
 }
 
 .hidden {
@@ -968,12 +918,6 @@ strong {
     position: relative;
     top: 145px;
     left: 45px;
-    @media (max-width: 1600px) {
-        width: 800px;
-        height: 800px;
-        top: 50px;
-        left: 25px;
-    };
 }
 
 .circleTop2 {
@@ -985,12 +929,6 @@ strong {
     position: relative;
     top: -1292px;
     left: -401px;
-    @media (max-width: 1600px) {
-        width: 573px;
-        height: 573px;
-        top: -1045px;
-        left: 920px;
-    }
 }
 
 .circleLeft {
@@ -1004,12 +942,6 @@ strong {
     top: -1579px;
     left: -166px;
     float: right;
-    @media (max-width: 1600px) {
-        width: 700px;
-        height: 1750px;
-        top: -1522px;
-        left: -85px;
-    };
 }
 
 .circleLeft2 {
@@ -1021,12 +953,6 @@ strong {
     position: relative;
     top: -1926px;
     left: 1680px;
-    @media (max-width: 1600px) {
-        width: 500px;
-        height: 500px;
-        top: -1926px;
-        left: 1680px;
-    };
 }
 
 .circleSkills {
@@ -1039,10 +965,6 @@ strong {
     opacity: 0.3;
     position: absolute;
     z-index: -1;
-    @media (max-width: 1600px) {
-        height: 90%;
-        margin: 400px 0px;
-    };
 }
 
 .circleProject {
@@ -1055,10 +977,6 @@ strong {
     opacity: 0.4;
     position: absolute;
     z-index: -1;
-    @media (max-width: 1600px) {
-        height: 400px;
-        margin: auto;
-    };
 }
 .circleProject2 {
     width: 580px;
@@ -1070,11 +988,6 @@ strong {
     opacity: 0.2;
     position: absolute;
     z-index: -1;
-    @media (max-width: 1600px) {
-        width: 400px;
-        height: 400px;
-        margin: -591px 984px 0px 0px;
-    };
 }
 
 .footer {
@@ -1196,4 +1109,120 @@ scrollbar {
 scrollbar-thumb {
     background-color: var(--white-color-25);
     border-radius: 8px;
+}
+
+@media (max-width: 1600px) {
+    .terminalSmall {
+        top: 400px;
+        height: 120px;
+    }
+
+    .backPerfil {
+        width: 450px;
+        height: 450px;
+        background-size: 450px 450px;
+    }
+
+    .perfilImg {
+        width: 485px;
+        height: 485px;
+        background-size: 485px 485px;
+    }
+
+    .gitlab_icon {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+
+    .linkedin_icon {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+
+    .wpp_icon {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+
+    .github, .linkedin, .whatsapp {
+        font-size: 30px !important;
+    }
+
+    .terminalView {
+        width: 450px;
+        height: 300px;
+    }
+
+    .wrapperProject {
+        height: 300px;
+    }
+
+    .titleProject {
+        font-size: 25px;
+    }
+
+    .screenShare, .githubIcon {
+        font-size: 1.5rem !important;
+    }
+
+    .describeProject {
+        max-width: 635px;
+        max-height: 185px;
+    }
+
+    .circleTop {
+        width: 800px;
+        height: 800px;
+        top: 50px;
+        left: 25px;
+    }
+
+    .circleTop2 {
+        width: 573px;
+        height: 573px;
+        top: -1045px;
+        left: 920px;
+    }
+
+    .circleLeft {
+        width: 700px;
+        height: 1750px;
+        top: -1522px;
+        left: -85px;
+    }
+
+    .circleLeft2 {
+        width: 500px;
+        height: 500px;
+        top: -1926px;
+        left: 1680px;
+    }
+
+    .circleSkills {
+        height: 90%;
+        margin: 400px 0px;
+    }
+
+    .circleProject {
+        height: 400px;
+        margin: auto;
+    }
+
+    .circleProject2 {
+        width: 400px;
+        height: 400px;
+        margin: -591px 984px 0px 0px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .backToTop {
+        color:red !important;
+        width: 100px !important;
+        height: 100px;
+    }
 }

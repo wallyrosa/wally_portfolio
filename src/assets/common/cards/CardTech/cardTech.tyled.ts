@@ -7,23 +7,6 @@ interface syledCardTechProps {
 }
 export const syledCardTech = (props: syledCardTechProps) => {
 
-    const CardTech = styled.div`
-        width: 60px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        cursor: pointer;
-        margin: 10px 0px;
-        transform: scale(${props?.scale ? props.scale : '1'});
-        transition: all 0.2s;
-        &:hover {
-            transform: scale(${props?.scale ? parseFloat(props.scale) + 0.1 : '1.1'})
-        }
-        @media (max-width: 1600px) {
-        width: 30px
-        }
-    `;
     const WrapperCard = styled.div`
         width: 60px;
         height: 60px;
@@ -45,6 +28,7 @@ export const syledCardTech = (props: syledCardTechProps) => {
             box-shadow: 0px 0px 3px 0px ${props.color};
         }
     `;
+
     const NameCardTech = styled.div`
         width: 120px;
         height: auto;
@@ -63,6 +47,24 @@ export const syledCardTech = (props: syledCardTechProps) => {
         font-size: 13px;
         font-weight: 400;
         margin: 3px 0px;
+        }
+    `;
+
+    const CardTech = styled.div`
+        width: 60px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        margin: 10px 0px;
+        transform: scale(${props?.scale ? props.scale : '1'});
+        transition: all 0.2s;
+        &:hover {
+            transform: scale(${props?.scale ? parseFloat(props.scale) + 0.1 : '1.1'})
+        }
+        @media (max-width: 1600px) {
+        width: 30px
         }
     `;
 

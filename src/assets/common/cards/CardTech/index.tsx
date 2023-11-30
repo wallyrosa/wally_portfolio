@@ -13,15 +13,20 @@ interface CardTechProps {
 
 export function CardTech(props: CardTechProps) {
     const {color, gradient} = colorCard(props?.icon);
-    const styled = syledCardTech({ color, scale: props?.scale, gradient });
+    const { CardTech, WrapperCard, NameCardTech } = syledCardTech({
+      color,
+      scale: props?.scale,
+      gradient,
+    });
+  
     return (
-      <styled.CardTech onClick={props?.onClick}>
-        <styled.WrapperCard>
+      <CardTech onClick={props?.onClick}>
+        <WrapperCard>
           {props.children ? props.children : (
             <Box className={`imgCardTech ${props?.icon}`} />
           )}
-        </styled.WrapperCard>
-        <styled.NameCardTech>{props?.name}</styled.NameCardTech>
-      </styled.CardTech>
+        </WrapperCard>
+        <NameCardTech>{props?.name}</NameCardTech>
+      </CardTech>
     );
 }

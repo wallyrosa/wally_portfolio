@@ -70,7 +70,7 @@ export function Terminal() {
             <Typewriter
               options={{
                 strings: [
-                  "Meu nome é <strong>Wallysson</strong> sou desenvolvedor Frontend, tenho <strong>experiência</strong> atual de 2 anos como dev e experiência em trabalhar com métodos ágeis como <strong>Scrum</strong> e <strong>Kanban</strong>. Logo a baixo você poderá ver alguma das minhas <strong>hard skills</strong> e alguns <strong>projetos</strong> pessoais que desenvolvi<strong>.</strong>",
+                  "Meu nome é <strong>Wallysson</strong> sou desenvolvedor Frontend, sou apaixonado pelo visual do negócio e tenho <strong>experiência</strong> em trabalhar com métodos ágeis como <strong>Scrum</strong> e <strong>Kanban</strong>. Logo a baixo você poderá ver alguma das minhas <strong>hard skills</strong> e alguns <strong>projetos</strong> pessoais que desenvolvi<strong>.</strong>",
                 ],
                 autoStart: true,
                 delay: 35,
