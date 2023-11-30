@@ -1,16 +1,11 @@
 import { Box } from "@mui/material";
-import { Cursor } from "react-simple-typewriter";
-import { useEffect, useState } from 'react';
-import { typeWriter } from "../../../hooks/typeWriter";
-import { TypeWriter } from "../../../common/TypeWriter";
+import Typewriter from "typewriter-effect";
+import { useState } from 'react';
 import { ButtonsTerminal } from "../../../common/buttons/ButtonsTerminal";
+import { goTo } from "../../../hooks/goTo";
 
 export function Terminal() {
   const [activeButton, setActiveButton] = useState(true);
-
-  useEffect(() => {
-    typeWriter(document.querySelector("#typing"));
-  }, []);
   
   return (
     <Box className="terminal">
@@ -18,19 +13,27 @@ export function Terminal() {
         <ButtonsTerminal />
         <button
           className={`buttonAbaTerminal ${activeButton ? "active" : ""}`}
-          onClick={() => setActiveButton(!activeButton)}
+          onClick={() => {
+            if (!activeButton) {
+              setActiveButton(!activeButton);
+            }
+          }}
         >
           ~/welcome
         </button>
         <button
-          className={`buttonAbaTerminal ${!activeButton ? "active" : ""}`}
-          onClick={() => setActiveButton(!activeButton)}
+          className={`buttonAbaTerminal animationToWarning ${!activeButton ? "active" : ""}`}
+          onClick={() => {
+            if (activeButton) {
+              setActiveButton(!activeButton);
+            }
+          }}
         >
           ~/about_me
         </button>
-        <a className="moreButton" href="#skills">
+        <div className="moreButton" onClick={() => goTo("#skills")}>
           <></>
-        </a>
+        </div>
       </Box>
       <Box className="contentTerminal">
         <Box className="columnNumber">
@@ -39,23 +42,41 @@ export function Terminal() {
           <ul>3</ul>
           <ul>4</ul>
           <ul>5</ul>
+          {!activeButton && <ul>6</ul>}
+          {!activeButton && <ul>7</ul>}
+          {!activeButton && <ul>8</ul>}
+          {!activeButton && <ul>9</ul>}
+          {!activeButton && <ul>10</ul>}
+          {!activeButton && <ul>11</ul>}
         </Box>
         {activeButton ? (
           <Box className="textAreaTerminal">
             <p className="titleTerminal">{"wally@wally: ~$ "}</p>
-            <TypeWriter>
-              Olá, tudo bem? Meu nome é Wallysson e sou desenvolvedor Frontend
-            </TypeWriter>
-            <Cursor />
+            <Typewriter
+              options={{
+                strings: [
+                  "Olá, tudo bem? Meu nome é <strong>Wallysson</strong> e sou desenvolvedor <strong>Frontend</strong>.",
+                ],
+                autoStart: true,
+                delay: 35,
+                loop: false,
+                deleteSpeed: Number.POSITIVE_INFINITY,
+              }}
+            />
           </Box>
         ) : (
           <Box className="textAreaTerminal">
             <p className="titleTerminal">{"wally@wally: ~$ "}</p>
-            <TypeWriter>
-              Meu nome é Wallysson sou dev Frontend, tenho experiência atual de
-              2 anos como dev e experiência em trabalhar em projetos com metodos
-              ágeis como Scrum e Kanban.
-            </TypeWriter>
+            <Typewriter
+              options={{
+                strings: [
+                  "Meu nome é <strong>Wallysson</strong> sou desenvolvedor Frontend, tenho <strong>experiência</strong> atual de 2 anos como dev e experiência em trabalhar com métodos ágeis como <strong>Scrum</strong> e <strong>Kanban</strong>. Logo a baixo você poderá ver alguma das minhas <strong>hard skills</strong> e alguns <strong>projetos</strong> pessoais que desenvolvi<strong>.</strong>",
+                ],
+                autoStart: true,
+                delay: 35,
+                deleteSpeed: Number.POSITIVE_INFINITY,
+              }}
+            />
           </Box>
         )}
       </Box>

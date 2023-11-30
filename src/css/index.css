@@ -279,7 +279,7 @@ strong {
     font-family: 'Bai Jamjuree';
     font-size: 20px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 165%;
     background-color: transparent;
     border: none;
@@ -293,6 +293,12 @@ strong {
     cursor: pointer;
 }
 
+.animationToWarning {
+    position: relative;
+    top: 0px;
+    animation: jump 0.7s;
+}
+
 .moreButton {
     width: 20px;
     height: 20px;
@@ -302,6 +308,43 @@ strong {
     background-image: url(../assets/imgs/icons/more_terminal.svg);
     background-size: 20px 20px;
     cursor: pointer;
+    animation: jumpRevert 0.7s;
+    position: relative;
+}
+
+@keyframes jump {
+    0% {
+        top: 0;
+    }
+    20% {
+        top: -10px;
+    }
+    40% {
+        top: 0px;
+    }
+    60% {
+        top: -10px;
+    }
+    80% {
+        top: 0px;
+    }
+}
+@keyframes jumpRevert {
+    0% {
+        top: 0;
+    }
+    20% {
+        top: 10px;
+    }
+    40% {
+        top: 0px;
+    }
+    60% {
+        top: 10px;
+    }
+    80% {
+        top: 0px;
+    }
 }
 
 .columnNumber {
@@ -315,6 +358,13 @@ strong {
 .contentTerminal {
     display: flex;
     margin-top: 25px;
+    overflow: auto;
+    height: 85%;
+}
+
+.contentTerminal::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }
 
 .columnNumber ul {
@@ -519,7 +569,7 @@ strong {
 
 .card {
     cursor: pointer;
-    transition: transform 0.4s ease
+    transition: all 0.4s ease;
 }
 
 .card:hover {
@@ -1056,13 +1106,55 @@ strong {
     display: flex;
     color: var(--font-color-main);
     font-family: 'Bai Jamjuree';
-    font-size: 55px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 275;
     line-height: 150%;
     gap: 10px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.textEmailFooter a {
+    color: var(--font-color-main);
+}
+
+.copyIcon {
+    cursor: pointer;
+    color: var(--terminal-theme);
+    transition: all 2s;
+}
+
+.copyIcon:hover {
+    color: var(--font-color-main) !important;
+    transform: scale(1.1);
+}
+
+.helperCopy {
+    width: 70px;
+    height: 20px;
+    border: 1px solid var(--terminal-theme);
+    padding: 2px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--border-color-main-25);
+    border-radius: 8px;
+    position: absolute;
+    margin: 70px -355px 0px 0px;
+    animation: fadein 2s;
+    opacity: 0;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 .strongTextFooter {

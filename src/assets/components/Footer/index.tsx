@@ -1,7 +1,17 @@
 import { Box } from "@mui/material";
 import { LineStyle } from "../../common/lines/LineStyle";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { useState } from "react";
 
 export function Footer() {
+  const [showHelper, setHelper] = useState<boolean>(false);
+  function copy() {
+    navigator.clipboard.writeText("wallysson.rosa12@gmail.com");
+    setHelper(true)
+    setTimeout(() => {
+      setHelper(false)
+    }, 2000)
+  }
   return (
     <footer className="footer">
       <Box
@@ -21,23 +31,49 @@ export function Footer() {
         </Box>
         <LineStyle grid={[3, 6, 3]}>
           <Box className="textEmailFooter">
-            Clique{" "}
-            <p className="strongTextFooter">
-              para o Email<strong>.</strong>
-            </p>
+            <a href="mailto:wallysson.rosa12@gmmail.com">Me mande um email</a>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "9px",
+              }}
+            >
+              <Box className="strongTextFooter">Ou copie e cole :D</Box>
+              <ContentCopyIcon
+                onClick={() => copy()}
+                className="copyIcon"
+              />
+              {showHelper && <Box className="helperCopy">Copiado!</Box>}
+            </Box>
           </Box>
         </LineStyle>
         <Box className="smallTextFooter">
-          <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '10px'}}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
             Este portfolio
-            <p className="strongTextFooter">não foi</p> feito em
-            cima de um <p className="strongTextFooter">template.</p>
+            <p className="strongTextFooter">não foi</p> feito em cima de um{" "}
+            <p className="strongTextFooter">template.</p>
           </Box>{" "}
-          <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '10px'}}>
-          Criado por
-          <p className="strongTextFooter">
-            Wallysson Rosa<strong>.</strong>
-          </p>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            Criado por
+            <p className="strongTextFooter">
+              Wallysson da Silva Rosa<strong>.</strong>
+            </p>
           </Box>
         </Box>
       </Box>

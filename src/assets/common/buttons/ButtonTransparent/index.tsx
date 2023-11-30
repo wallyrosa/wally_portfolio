@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { goTo } from "../../../hooks/goTo"
 
 interface ButtonTransparentProps {
     onClick?: () => void
@@ -14,20 +15,11 @@ export function ButtonTransparent(props: ButtonTransparentProps) {
         height: `${props?.height ? props?.height : '35px'}`
     }
     
-    function scrollToSection(elementId: any) {
-      var element = document.querySelector(elementId);
-
-      if (element) {
-        window.scrollTo({
-          top: element.offsetTop
-        });
-      }
-    }
     return (
       <div
         id="anchor"
         style={style}
-        onClick={() => scrollToSection(props?.to)}
+        onClick={() => goTo(props?.to)}
         className="buttonTransparent"
       >
         {props?.children}
