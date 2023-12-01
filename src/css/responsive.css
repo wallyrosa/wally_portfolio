@@ -1,0 +1,488 @@
+@media (max-width: 1600px) {
+    .terminalSmall {
+        top: 400px;
+        height: 120px;
+    }
+
+    .backPerfil {
+        width: 450px;
+        height: 450px;
+        background-size: 450px 450px;
+    }
+
+    .perfilImg {
+        width: 485px;
+        height: 485px;
+        background-size: 485px 485px;
+    }
+
+    .gitlab_icon {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+
+    .linkedin_icon {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+
+    .wpp_icon {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+
+    .github, .linkedin, .whatsapp {
+        font-size: 30px !important;
+    }
+
+    .terminalView {
+        width: 450px;
+        height: 300px;
+    }
+
+    .wrapperProject {
+        height: 300px;
+    }
+
+    .titleProject {
+        font-size: 25px;
+    }
+
+    .screenShare, .githubIcon {
+        font-size: 1.5rem !important;
+    }
+
+    .describeProject {
+        max-width: 635px;
+        max-height: 185px;
+    }
+
+    .circleTop {
+        width: 800px;
+        height: 800px;
+        top: 50px;
+        left: 25px;
+    }
+
+    .circleTop2 {
+        width: 573px;
+        height: 573px;
+        top: -1045px;
+        left: 920px;
+    }
+
+    .circleLeft {
+        width: 700px;
+        height: 1750px;
+        top: -1522px;
+        left: -85px;
+    }
+
+    .circleLeft2 {
+        width: 500px;
+        height: 500px;
+        top: -1926px;
+        left: 1680px;
+    }
+
+    .circleSkills {
+        height: 90%;
+        margin: 400px 0px;
+    }
+
+    .circleProject {
+        height: 400px;
+        margin: auto;
+    }
+
+    .circleProject2 {
+        width: 400px;
+        height: 400px;
+        margin: -591px 984px 0px 0px;
+    }
+
+}
+@media (max-width: 1250px) {
+    .contentMain {
+        flex-direction: column;
+    }
+    .terminal {
+        width: 580px !important;
+        height: 325px !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+        margin: 0px !important;
+    }
+    .buttonsTerminal {
+        width: 65px !important;
+        margin-bottom: 8px !important;
+    }
+    .redButton {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .yellowButton {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .greenButton {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .buttonAbaTerminal {
+        font-size: 15px !important;
+        border-bottom: 4px solid var(--terminal-theme) !important;
+    }
+    .titleTerminal {
+        font-size: 20px !important;
+    }
+    .Typewriter__wrapper {
+        font-size: 28px !important;
+    }
+    .columnNumber ul {
+        font-size: 25px !important;
+        line-height: 136% !important;
+    }
+    .textAreaTerminal {
+        max-width: 500px !important;
+        line-height: 85% !important;
+    }
+}
+@media (max-width: 940px) {
+    .skillsAvancadas {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    .terminalSmall {
+        top: 400px;
+        height: 120px;
+    }
+    .terminalView {
+        width: 680px !important;
+        height: 630px !important;
+    }
+    .describeProject {
+        width: 680px !important;
+        max-height: 150px !important;
+        margin: 0px !important;
+        font-size: 1.8rem !important;
+    }
+    .titleProject {
+        font-size: 20px !important;
+    }
+    .moreButton {
+        width: 15px !important;
+        height: 15px !important;
+        background-size: 15px 15px !important;
+    }
+    .fullScreenToMobile {
+        height: 100% !important;
+    }
+    .wrapperProject {
+        flex-direction: column;
+        height: 700px !important;
+    }
+    .wrapperCard {
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 120px !important;
+    }
+    .leftTech, .rightTech {
+        max-height: 100px !important;
+        width: 100% !important;
+        border-right: none !important;
+        border-left: none !important;
+        padding: 0px !important;
+        height: 200px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .leftTech {
+        margin: 0px 0px 10px 0px !important;
+        border-bottom: 5px solid var(--terminal-theme);
+        justify-content: flex-start !important;
+    }
+    .rightTech {
+        margin: 10px 0px 0px 0px !important;
+        border-top: 5px solid var(--terminal-theme);
+        justify-content: flex-start !important;
+    }
+    .rightTech::-webkit-scrollbar, .leftTech::-webkit-scrollbar {
+        height: 5px;
+    }
+    .footer {
+        height: 355px !important;
+    }
+    .textFooter {
+        font-size: 35px !important;
+    }
+    .textEmailFooter {
+        font-size: 25px !important;
+    }
+    .smallTextFooterContent {
+        font-size: 15px !important;
+    }
+    .smallTextFooter {
+        gap: 5px !important;
+    }
+    .helperCopy {
+        margin: 70px -230px 0px 0px !important;
+    }
+}
+@media (max-width: 760px) {
+    .terminalSmall {
+        top: 400px;
+        height: 120px;
+    }
+    .terminalView {
+        width: 510px !important;
+        height: 630px !important;
+    }
+    .describeProject {
+        width: 510px !important;
+        max-height: 150px !important;
+        margin: 0px !important;
+        font-size: 1.8rem !important;
+    }
+    .titleProject {
+        font-size: 20px !important;
+    }
+    .moreButton {
+        width: 15px !important;
+        height: 15px !important;
+        background-size: 15px 15px !important;
+    }
+    .fullScreenToMobile {
+        height: 100% !important;
+    }
+    .wrapperProject {
+        height: 570px !important;
+    }
+    .wrapperCard {
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 120px !important;
+    }
+    .leftTech, .rightTech {
+        max-height: 100px !important;
+        width: 100% !important;
+        border-right: none !important;
+        border-left: none !important;
+        padding: 0px !important;
+        height: 200px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .leftTech {
+        margin: 0px 0px 10px 0px !important;
+        border-bottom: 5px solid var(--terminal-theme);
+        justify-content: flex-start !important;
+    }
+    .rightTech {
+        margin: 10px 0px 0px 0px !important;
+        border-top: 5px solid var(--terminal-theme);
+        justify-content: flex-start !important;
+    }
+    .rightTech::-webkit-scrollbar, .leftTech::-webkit-scrollbar {
+        height: 5px;
+    }
+}
+@media(max-width: 600px) {
+    .buttonTransparent {
+        font-size: 15px !important;
+    }
+    .contentMain {
+        flex-direction: column !important;
+        height: 34rem !important;
+        justify-content: space-between !important;
+    }
+    .skillsAvancadas {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    .terminal {
+        width: 295px !important;
+        height: 210px !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+        margin: 0px !important;
+    }
+    .buttonsTerminal {
+        width: 65px !important;
+        margin-bottom: 8px !important;
+    }
+    .redButton {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .yellowButton {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .greenButton {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .buttonAbaTerminal {
+        font-size: 10px !important;
+        border-bottom: 4px solid var(--terminal-theme) !important;
+    }
+    .titleTerminal {
+        font-size: 20px !important;
+    }
+    .Typewriter__wrapper {
+        font-size: 20px !important;
+    }
+    .columnNumber ul {
+        font-size: 25px !important;
+        line-height: 136% !important;
+    }
+    .textAreaTerminal {
+        max-width: 236px !important;
+        line-height: 85% !important;
+    }
+    .backPerfil {
+        width: 333px !important;
+        height: 230px !important;
+        background-size: 230px 230px !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    .perfilImg {
+        width: 100% !important;
+        height: 200px !important;
+        background-size: 205px 205px !important;
+        top: -25px !important;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .terminalSmall {
+        padding: 8px 5px 20px 5px !important;
+        top: 150px !important;
+        height: 78px !important;
+        width: 327px !important;
+        border-radius: 10px !important;
+    }
+    .terminalView {
+        width: 330px !important;
+        height: 630px !important;
+    }
+    .describeProject {
+        width: 330px !important;
+        max-height: 120px !important;
+        margin: 0px !important;
+        font-size: 1.2rem !important;
+    }
+    .titleProject {
+        font-size: 20px !important;
+    }
+    .moreButton {
+        width: 15px !important;
+        height: 15px !important;
+        background-size: 15px 15px !important;
+    }
+    .fullScreenToMobile {
+        height: 100% !important;
+    }
+    .wrapperProject {
+        flex-direction: column;
+        height: 400px !important;
+    }
+    .wrapperCard {
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 120px !important;
+    }
+    .leftTech, .rightTech {
+        max-height: 70px !important;
+        width: 100% !important;
+        border-right: none !important;
+        border-left: none !important;
+        padding: 0px !important;
+        height: 200px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .leftTech {
+        margin: 0px 0px 10px 0px !important;
+        border-bottom: 5px solid var(--terminal-theme);
+        justify-content: flex-start !important;
+    }
+    .rightTech {
+        margin: 10px 0px 0px 0px !important;
+        border-top: 5px solid var(--terminal-theme);
+        justify-content: flex-start !important;
+    }
+    .rightTech::-webkit-scrollbar, .leftTech::-webkit-scrollbar {
+        height: 5px;
+    }
+    .subTitleContents {
+        font-size: 35px !important;
+    }
+    .backToTop {
+        right: 25px !important;
+    }
+    .contentTerminal {
+        height: 81% !important;
+        margin-top: 10px !important;
+    }
+    .github, .linkedin, .whatsapp {
+        font-size: 24px !important;
+    }
+    .footer {
+        height: 220px !important;
+    }
+    .textFooter {
+        font-size: 20px !important;
+    }
+    .textEmailFooter {
+        font-size: 15px !important;
+    }
+    .smallTextFooterContent {
+        font-size: 10px !important;
+    }
+    .smallTextFooter {
+        gap: 3px !important;
+    }
+    .helperCopy {
+        margin: 56px -143px 0px 0px !important;
+        width: 57px;
+        height: 15px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 360px) {
+    .textEmailFooter {
+        font-size: 13px !important;
+    }
+    .terminalView {
+        width: 290px !important;
+    }
+    .terminalSmall {
+        width: 295px !important;
+    }
+    .wrapperProject {
+        height: 345px !important;
+    }
+    .describeProject {
+        width: 290px !important;
+    }
+    .perfilImg {
+        width: 96% !important;
+    }
+    .subTitleContents {
+        font-size: 30px !important;
+    }
+    .helperCopy {
+        margin: 56px -122px 0px 0px !important;
+    }
+}

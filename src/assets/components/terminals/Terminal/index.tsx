@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect";
 import { useState } from 'react';
 import { ButtonsTerminal } from "../../../common/buttons/ButtonsTerminal";
 import { goTo } from "../../../hooks/goTo";
+import { isMobile } from "react-device-detect";
 
 export function Terminal() {
   const [activeButton, setActiveButton] = useState(true);
@@ -22,7 +23,9 @@ export function Terminal() {
           ~/welcome
         </button>
         <button
-          className={`buttonAbaTerminal animationToWarning ${!activeButton ? "active" : ""}`}
+          className={`buttonAbaTerminal animationToWarning ${
+            !activeButton ? "active" : ""
+          }`}
           onClick={() => {
             if (activeButton) {
               setActiveButton(!activeButton);
@@ -48,6 +51,8 @@ export function Terminal() {
           {!activeButton && <ul>9</ul>}
           {!activeButton && <ul>10</ul>}
           {!activeButton && <ul>11</ul>}
+          {!activeButton && isMobile && <ul>12</ul>}
+          {!activeButton && isMobile && <ul>13</ul>}
         </Box>
         {activeButton ? (
           <Box className="textAreaTerminal">

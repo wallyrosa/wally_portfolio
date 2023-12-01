@@ -6,7 +6,7 @@ import { cardsAvancados, cardsDesenvolvimento } from "./cards";
 
 export function ContentSkills() {
     return (
-      <Box className="fullScreen" sx={{ scrollSnapAlign: "start" }}>
+      <Box className="fullScreenToMobile" sx={{ scrollSnapAlign: "start" }}>
         <Box className="circleSkills" />
         <Box className="marginLine">
           <LineRight width={"60%"} />
@@ -21,7 +21,7 @@ export function ContentSkills() {
               <CardSkill key={index} icon={card.icon} name={card.name} />
             ))}
           </Box>
-          <Box className="subTitleContents">Em Desenvolvimento</Box>
+          <Box className="subTitleContents">Em desenvolvimento</Box>
           <Box className="skillsAvancadas">
             {cardsDesenvolvimento.map((card, index) => (
               <CardSkill key={index} icon={card.icon} name={card.name} />

@@ -69,15 +69,11 @@ export function ContentProject() {
                     <CardTech
                       icon="figma"
                       name="Protótipo"
-                      onClick={() =>
-                        window.open(project.figma_link, "_blank")
-                      }
+                      onClick={() => window.open(project.figma_link, "_blank")}
                     />
                     <CardTech
                       name="Github"
-                      onClick={() =>
-                        window.open(project.github_link, "_blank")
-                      }
+                      onClick={() => window.open(project.github_link, "_blank")}
                     >
                       <GitHubIcon className="githubIcon" />
                     </CardTech>
@@ -113,11 +109,7 @@ export function ContentProject() {
                 <Box className="rightTech">
                   <Box className="wrapperCard">
                     {project.tech?.map((card, index) => (
-                      <CardTech
-                        key={index}
-                        name={card.name}
-                        icon={card.icon}
-                      />
+                      <CardTech key={index} name={card.name} icon={card.icon} />
                     ))}
                   </Box>
                 </Box>

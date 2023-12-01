@@ -27,6 +27,10 @@ export const syledCardTech = (props: syledCardTechProps) => {
             border-image: ${props.gradient};
             box-shadow: 0px 0px 3px 0px ${props.color};
         }
+        @media (max-width: 600px) {
+            width: 30px !important;
+            height: 30px !important;
+        }
     `;
 
     const NameCardTech = styled.div`
@@ -44,9 +48,14 @@ export const syledCardTech = (props: syledCardTechProps) => {
         line-height: normal;
         transition: all 0.4s;
         @media (max-width: 1600px) {
-        font-size: 13px;
-        font-weight: 400;
-        margin: 3px 0px;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 3px 0px;
+        }
+        @media (max-width: 600px) {
+            width: 50px !important;
+            margin-bottom: 12px !important;
+            font-size: 10px !important;
         }
     `;
 
@@ -64,7 +73,10 @@ export const syledCardTech = (props: syledCardTechProps) => {
             transform: scale(${props?.scale ? parseFloat(props.scale) + 0.1 : '1.1'})
         }
         @media (max-width: 1600px) {
-        width: 30px
+            width: 30px;
+        }
+        @media (max-width: 600px) {
+            height: 70px !important;
         }
     `;
 

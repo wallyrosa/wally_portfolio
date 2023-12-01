@@ -6,11 +6,23 @@ import { useState } from "react";
 export function Footer() {
   const [showHelper, setHelper] = useState<boolean>(false);
   function copy() {
-    navigator.clipboard.writeText("wallysson.rosa12@gmail.com");
-    setHelper(true)
-    setTimeout(() => {
-      setHelper(false)
-    }, 2000)
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard
+        .writeText("wallysson.rosa12@gmail.com")
+        .then(() => {
+          setHelper(true);
+          setTimeout(() => {
+            setHelper(false);
+          }, 2000);
+        })
+        .catch((err) => {
+          console.error("Erro ao copiar texto:", err);
+        });
+    } else {
+      console.error(
+        "A função writeText não é suportada neste navegador ou dispositivo móvel."
+      );
+    }
   }
   return (
     <footer className="footer">
@@ -41,34 +53,21 @@ export function Footer() {
               }}
             >
               <Box className="strongTextFooter">Ou copie e cole :D</Box>
-              <ContentCopyIcon
-                onClick={() => copy()}
-                className="copyIcon"
-              />
+              <ContentCopyIcon onClick={() => copy()} className="copyIcon" />
               {showHelper && <Box className="helperCopy">Copiado!</Box>}
             </Box>
           </Box>
         </LineStyle>
-        <Box className="smallTextFooter">
+        <Box className="smallTextFooterContent">
           <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              gap: "10px",
-            }}
+            className="smallTextFooter"
           >
             Este portfolio
             <p className="strongTextFooter">não foi</p> feito em cima de um{" "}
             <p className="strongTextFooter">template.</p>
           </Box>{" "}
           <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              gap: "10px",
-            }}
+            className="smallTextFooter"
           >
             Criado por
             <p className="strongTextFooter">
