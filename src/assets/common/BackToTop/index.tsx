@@ -1,6 +1,6 @@
-import ExpandLessRoundedIcon from "@mui/icons-material/ExpandLessRounded";
-import { Box } from "@mui/material";
-import { useEffect, useState } from "react";
+import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
+import { Box } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 export function BackToTop() {
   const [showButton, setShowButton] = useState(false);
@@ -8,34 +8,33 @@ export function BackToTop() {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 200) {
-        setShowButton(true)
-        return
+        setShowButton(true);
+        return;
       } else if (window.scrollY < 200) {
-        setShowButton(false)
+        setShowButton(false);
       }
       if (window.scrollY < 150) {
-        setDisplayNone("none");
+        setDisplayNone('none');
         return;
       } else {
-        setDisplayNone("flex");
+        setDisplayNone('flex');
       }
-      
-    })
+    });
   }, []);
 
   const scrollTop = () => {
     window.scrollTo({
-      top: 0
-    })
-  }
-  
+      top: 0,
+    });
+  };
+
   return (
     <Box
       style={{ display: `${displayNone}` }}
-      className={`backToTop ${showButton ? "show" : "hidden"}`}
+      className={`backToTop ${showButton ? 'show' : 'hidden'}`}
       onClick={scrollTop}
     >
-      <ExpandLessRoundedIcon sx={{ fontSize: "75px" }} />
+      <ExpandLessRoundedIcon sx={{ fontSize: '75px' }} />
     </Box>
   );
 }

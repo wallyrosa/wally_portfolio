@@ -1,19 +1,19 @@
-import { Box } from "@mui/material";
-import Typewriter from "typewriter-effect";
+import { Box } from '@mui/material';
+import Typewriter from 'typewriter-effect';
 import { useState } from 'react';
-import { ButtonsTerminal } from "../../../common/buttons/ButtonsTerminal";
-import { goTo } from "../../../hooks/goTo";
-import { isMobile } from "react-device-detect";
+import { ButtonsTerminal } from '../../../common/buttons/ButtonsTerminal';
+import { goTo } from '../../../hooks/goTo';
+import { isMobile } from 'react-device-detect';
 
 export function Terminal() {
   const [activeButton, setActiveButton] = useState(true);
-  
+
   return (
     <Box className="terminal">
       <Box className="topTerminal">
         <ButtonsTerminal />
         <button
-          className={`buttonAbaTerminal ${activeButton ? "active" : ""}`}
+          className={`buttonAbaTerminal ${activeButton ? 'active' : ''}`}
           onClick={() => {
             if (!activeButton) {
               setActiveButton(!activeButton);
@@ -24,7 +24,7 @@ export function Terminal() {
         </button>
         <button
           className={`buttonAbaTerminal animationToWarning ${
-            !activeButton ? "active" : ""
+            !activeButton ? 'active' : ''
           }`}
           onClick={() => {
             if (activeButton) {
@@ -34,7 +34,7 @@ export function Terminal() {
         >
           ~/about_me
         </button>
-        <div className="moreButton" onClick={() => goTo("#skills")}>
+        <div className="moreButton" onClick={() => goTo('#skills')}>
           <></>
         </div>
       </Box>
@@ -56,11 +56,11 @@ export function Terminal() {
         </Box>
         {activeButton ? (
           <Box className="textAreaTerminal">
-            <p className="titleTerminal">{"wally@wally: ~$ "}</p>
+            <p className="titleTerminal">{'wally@wally: ~$ '}</p>
             <Typewriter
               options={{
                 strings: [
-                  "Olá, tudo bem? Meu nome é <strong>Wallysson</strong> e sou desenvolvedor <strong>Frontend</strong>.",
+                  'Olá, tudo bem? Meu nome é <strong>Wallysson</strong> e sou desenvolvedor <strong>Frontend</strong>.',
                 ],
                 autoStart: true,
                 delay: 35,
@@ -71,11 +71,11 @@ export function Terminal() {
           </Box>
         ) : (
           <Box className="textAreaTerminal">
-            <p className="titleTerminal">{"wally@wally: ~$ "}</p>
+            <p className="titleTerminal">{'wally@wally: ~$ '}</p>
             <Typewriter
               options={{
                 strings: [
-                  "Meu nome é <strong>Wallysson</strong> sou desenvolvedor Frontend, sou apaixonado pelo visual do negócio e tenho <strong>experiência</strong> em trabalhar com métodos ágeis como <strong>Scrum</strong> e <strong>Kanban</strong>. Logo a baixo você poderá ver alguma das minhas <strong>hard skills</strong> e alguns <strong>projetos</strong> pessoais que desenvolvi<strong>.</strong>",
+                  'Meu nome é <strong>Wallysson</strong> sou desenvolvedor Frontend, sou apaixonado pelo visual do negócio e tenho <strong>experiência</strong> em trabalhar com métodos ágeis como <strong>Scrum</strong> e <strong>Kanban</strong>. Logo a baixo você poderá ver alguma das minhas <strong>hard skills</strong> e alguns <strong>projetos</strong> pessoais que desenvolvi<strong>.</strong>',
                 ],
                 autoStart: true,
                 delay: 35,

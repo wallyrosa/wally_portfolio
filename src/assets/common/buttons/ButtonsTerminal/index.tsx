@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
+import { Box } from '@mui/material';
 
 interface ButtonsTerminalProps {
-  style?: {}
+  style?: {};
 }
 
 export function ButtonsTerminal(props: ButtonsTerminalProps) {

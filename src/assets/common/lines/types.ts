@@ -1,3 +1,3 @@
 export interface DtoProps {
-    width?: string
+  width?: string;
 }

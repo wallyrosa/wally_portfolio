@@ -1,7 +1,7 @@
-import { Grid, Box } from "@mui/material";
-import { ReactNode } from "react";
-import { LineRight } from "../LineRight";
-import { LineLeft } from "../LineLeft";
+import { Grid, Box } from '@mui/material';
+import { ReactNode } from 'react';
+import { LineRight } from '../LineRight';
+import { LineLeft } from '../LineLeft';
 interface LineStyleProps {
   children?: ReactNode;
   grid?: number[];
@@ -12,7 +12,7 @@ export function LineStyle(props: LineStyleProps) {
     <Box className="lineStyle">
       <Grid container>
         <Grid
-          sx={{ margin: "auto" }}
+          sx={{ margin: 'auto' }}
           item
           xs={props?.grid?.length ? props?.grid[0] : 4}
         >
@@ -22,7 +22,7 @@ export function LineStyle(props: LineStyleProps) {
           {props.children}
         </Grid>
         <Grid
-          sx={{ margin: "auto" }}
+          sx={{ margin: 'auto' }}
           item
           xs={props?.grid?.length ? props?.grid[2] : 4}
         >

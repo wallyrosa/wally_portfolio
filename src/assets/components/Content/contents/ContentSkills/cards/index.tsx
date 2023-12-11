@@ -1,36 +1,36 @@
 export const cardsAvancados = [
   {
-    icon: "html",
-    name: "html",
+    icon: 'html',
+    name: 'html',
   },
   {
-    icon: "react",
-    name: "react",
+    icon: 'react',
+    name: 'react',
   },
   {
-    icon: "javascript",
-    name: "javascript",
+    icon: 'javascript',
+    name: 'javascript',
   },
   {
-    icon: "typescript",
-    name: "typescript",
+    icon: 'typescript',
+    name: 'typescript',
   },
   {
-    icon: "css",
-    name: "css",
+    icon: 'css',
+    name: 'css',
   },
 ];
 export const cardsDesenvolvimento = [
   {
-    icon: "vue",
-    name: "vue",
+    icon: 'vue',
+    name: 'vue',
   },
   {
-    icon: "material_ui",
-    name: "material ui",
+    icon: 'material_ui',
+    name: 'material ui',
   },
   {
-    icon: "figma",
-    name: "figma",
+    icon: 'figma',
+    name: 'figma',
   },
 ];
