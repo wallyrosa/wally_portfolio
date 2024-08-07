@@ -3,18 +3,20 @@ import { Content } from './assets/components/Content';
 import { Helmet } from 'react-helmet-async';
 
 export function App() {
-  const currentUrl = window.location.hostname;
+  const currentUrl = window.location.href;
   let ogImage = '';
   let description = '';
   let title = '';
 
-  if (currentUrl === 'wallysson.vercel.app') {
+  console.log('currentUrl: ', currentUrl);
+
+  if (currentUrl === 'https://wallysson.vercel.app') {
     console.log('só wally');
     ogImage = 'https://i.ibb.co/rtbRM1V/printproject.png';
     description = 'Apenas o nome Wally';
     title = 'Title apenas Wally';
 
-  } else if (currentUrl === 'wallysson.vercel.app/teste') {
+  } else if (currentUrl === 'https://wallysson.vercel.app/teste') {
     console.log('/teste');
     ogImage = 'https://i.ibb.co/GQw01gS/thumbnail.png';
     description = 'Agora esta com /teste';
