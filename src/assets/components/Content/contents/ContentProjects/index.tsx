@@ -58,9 +58,10 @@ export function ContentProject() {
                   <Box className="wrapperCard">
                     <CardTech
                       icon="screenShare"
-                      name="projeto"
+                      name="visitar"
+                      isDisabled={!project.view_project}
                       onClick={() =>
-                        window.open(project.view_project, '_blank')
+                        window.open(project.view_project ?? '', '_blank')
                       }
                     >
                       <ScreenShareIcon className="screenShare" />
@@ -68,11 +69,17 @@ export function ContentProject() {
                     <CardTech
                       icon="figma"
                       name="Protótipo"
-                      onClick={() => window.open(project.figma_link, '_blank')}
+                      isDisabled={!project.figma_link}
+                      onClick={() =>
+                        window.open(project.figma_link ?? '', '_blank')
+                      }
                     />
                     <CardTech
                       name="Github"
-                      onClick={() => window.open(project.github_link, '_blank')}
+                      isDisabled={!project.github_link}
+                      onClick={() =>
+                        window.open(project.github_link ?? '', '_blank')
+                      }
                     >
                       <GitHubIcon className="githubIcon" />
                     </CardTech>

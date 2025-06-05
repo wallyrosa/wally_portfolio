@@ -8,12 +8,16 @@ export const cardsAvancados = [
     name: 'react',
   },
   {
-    icon: 'javascript',
-    name: 'javascript',
+    icon: 'tailwind',
+    name: 'tailwind',
   },
   {
     icon: 'typescript',
     name: 'typescript',
+  },
+  {
+    icon: 'javascript',
+    name: 'javascript',
   },
   {
     icon: 'css',

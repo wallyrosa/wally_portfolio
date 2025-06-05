@@ -4,6 +4,7 @@ interface syledCardTechProps {
   color: string;
   scale?: string;
   gradient?: string;
+  isDisabled?: boolean;
 }
 export const syledCardTech = (props: syledCardTechProps) => {
   const WrapperCard = styled.div`
@@ -64,7 +65,8 @@ export const syledCardTech = (props: syledCardTechProps) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    cursor: ${props?.isDisabled ? 'not-allowed' : 'pointer'};
+    opacity: ${props?.isDisabled ? 0.5 : 1};
     margin: 10px 0px;
     transform: scale(${props?.scale ? props.scale : '1'});
     transition: all 0.2s;

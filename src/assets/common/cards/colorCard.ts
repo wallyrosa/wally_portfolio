@@ -23,6 +23,12 @@ export const colorCard = (icon?: string) => {
     case 'material_ui':
       color = '#3A7EF9';
       break;
+    case 'tailwind':
+      color = '#38bdf8';
+      break;
+    case 'bootstrap':
+      color = '#6610f2';
+      break;
     case 'figma':
       gradient =
         'linear-gradient(to bottom, rgba(242, 78, 30, 1), rgba(162, 89, 255, 1), rgba(10, 207, 131, 1), rgba(26, 188, 254, 1)) 1';

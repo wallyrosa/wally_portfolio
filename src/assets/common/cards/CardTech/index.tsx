@@ -9,6 +9,7 @@ interface CardTechProps {
   children?: ReactNode;
   onClick?: () => void;
   scale?: string;
+  isDisabled?: boolean;
 }
 
 export function CardTech(props: CardTechProps) {
@@ -17,10 +18,16 @@ export function CardTech(props: CardTechProps) {
     color,
     scale: props?.scale,
     gradient,
+    isDisabled: props?.isDisabled,
   });
 
   return (
-    <CardTech onClick={props?.onClick}>
+    <CardTech
+      onClick={() => {
+        if (props?.isDisabled) return;
+        props?.onClick?.();
+      }}
+    >
       <WrapperCard>
         {props.children ? (
           props.children

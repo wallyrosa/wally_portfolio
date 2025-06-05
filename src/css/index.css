@@ -635,6 +635,18 @@ strong {
     background-size: contain;
 }
 
+.tailwind {
+    height: 100%;
+    background-image: url('../assets/imgs/icons/tailwind_icon.svg');
+    background-size: contain;
+}
+
+.bootstrap {
+    height: 100%;
+    background-image: url('../assets/imgs/icons/bootstrap_icon.svg');
+    background-size: contain;
+}
+
 .figma {
     height: 100%;
     background-image: url('../assets/imgs/icons/figma_icon.svg');
@@ -820,14 +832,14 @@ strong {
     border-radius: 8px;
 }
 
-.project1 {
-    background-image: url('../assets/imgs/teste.png');
+.poliDigital {
+    background-image: url('../assets/imgs/poli-digital.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.project2 {
-    background-image: url('../assets/imgs/teste.png');
+.mapaDoSaber {
+    background-image: url('../assets/imgs/mapa-do-saber.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
