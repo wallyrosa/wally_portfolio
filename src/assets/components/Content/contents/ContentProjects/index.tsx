@@ -11,11 +11,7 @@ export function ContentProject() {
   return (
     <>
       {projects?.map((project, index) => (
-        <Box
-          sx={{ flexDirection: 'column' }}
-          className="fullScreen"
-          key={index}
-        >
+        <Box className="project-item" key={index}>
           <Box
             sx={{
               display: 'flex',
@@ -48,9 +44,10 @@ export function ContentProject() {
               sx={{
                 margin: 'auto',
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'center',
+                gap: '30px',
               }}
             >
               <Box className="wrapperProject">
@@ -120,7 +117,17 @@ export function ContentProject() {
                   </Box>
                 </Box>
               </Box>
-              <Box className="describeProject">{project.describe}</Box>
+              <Box className="describeProject">
+                <span className="titleDescribe">{project.titleDescribe}</span>
+                <Box className="describeProjectTextContainer">
+                  <span
+                    className="describeProjectText"
+                    dangerouslySetInnerHTML={{
+                      __html: project.describe,
+                    }}
+                  />
+                </Box>
+              </Box>
             </Box>
           </Box>
         </Box>
@@ -131,7 +138,19 @@ export function ContentProject() {
       >
         <Box></Box>
         <Box>
-          EM BREVE<strong>.</strong>
+          EM BREVE:
+          <strong
+            style={{
+              margin: '0px 10px',
+              background: 'var(--terminal-theme)',
+              padding: '5px 10px',
+              borderRadius: '5px',
+              color: 'var(--background-terminal)',
+            }}
+          >
+            O SEU PROJETO AQUI
+          </strong>
+          ?
         </Box>
         <Box sx={{ bottom: '0' }} className="marginLine">
           <LineLeft width={'60%'} />

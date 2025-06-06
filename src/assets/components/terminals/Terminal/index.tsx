@@ -60,7 +60,7 @@ export function Terminal() {
             <Typewriter
               options={{
                 strings: [
-                  'Olá, tudo bem? Meu nome é <strong>Wallysson</strong> e sou desenvolvedor <strong>Frontend</strong>.',
+                  'Olá, tudo bem? Meu nome é <strong>Wallysson</strong> e sou desenvolvedor <strong>Frontend</strong>. Bem vindo ao meu portfólio<strong>.</strong>',
                 ],
                 autoStart: true,
                 delay: 35,
@@ -75,7 +75,7 @@ export function Terminal() {
             <Typewriter
               options={{
                 strings: [
-                  'Meu nome é <strong>Wallysson</strong> sou desenvolvedor Frontend, sou apaixonado pelo visual do negócio e tenho <strong>experiência</strong> em trabalhar com métodos ágeis como <strong>Scrum</strong> e <strong>Kanban</strong>. Logo a baixo você poderá ver alguma das minhas <strong>hard skills</strong> e alguns <strong>projetos</strong> pessoais que desenvolvi<strong>.</strong>',
+                  'Olá! Meu nome é <strong>Wallysson</strong> e sou desenvolvedor <strong>Frontend</strong>, com foco em transformar ideias em interfaces intuitivas e visualmente atraentes. Tenho <strong>experiência com metodologias ágeis</strong> como <strong>Scrum</strong> e <strong>Kanban</strong>, o que me permite colaborar bem em equipe e entregar com eficiência.Abaixo, você pode conferir algumas das minhas <strong>hard skills</strong> e os <strong>projetos</strong> que desenvolvi ao longo da minha trajetória<strong>.</strong>',
                 ],
                 autoStart: true,
                 delay: 35,

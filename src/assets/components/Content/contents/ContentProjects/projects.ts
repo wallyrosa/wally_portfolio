@@ -2,8 +2,9 @@ export const projects = [
   {
     title: '~/Poli Digital',
     imgClass: 'poliDigital',
+    titleDescribe: 'Sistema de atendimento integrado via WhatsApp',
     describe:
-      'Plataforma de comunicação usando a API do WhatsApp Meta para envio de mensagens e organização de fluxo e gestão de leads. Na Poli Digital, eu trabalhei como desenvolvedor frontend, onde desenvolvi ao lado do time de desenvolvimento backend e Produto. Aplicamos novas funcionalidades para agregar valor a plataforma e melhorar a experiência do usuário. Na Poli além de desenvolver novos recursos, também fiz a manutenção e correção de bugs no time de Sustentação. ',
+      'Plataforma de comunicação integrada com a API oficial do WhatsApp (Meta), focada no envio de mensagens, organização de fluxos e gestão de leads.<br><br>Na <strong>Poli Digital</strong>, atuei como desenvolvedor <strong>Frontend</strong>, trabalhando em conjunto com os times de <strong>Backend</strong> e <strong>Produto</strong>. Participei do desenvolvimento de novas funcionalidades voltadas à melhoria da experiência do usuário e ao aumento do valor da plataforma.<br><br>Além disso, atuei no time de <strong>Sustentação</strong>, realizando manutenção, correções de bugs e garantindo a estabilidade da aplicação.',
     view_project: 'https://poli.digital/',
     github_link: null,
     figma_link: null,
@@ -25,16 +26,17 @@ export const projects = [
         icon: 'javascript',
       },
       {
-        name: 'html',
-        icon: 'html',
+        name: 'figma',
+        icon: 'figma',
       },
     ],
   },
   {
     title: '~/Mapa do Saber',
     imgClass: 'mapaDoSaber',
+    titleDescribe: 'Plataforma de Estudos para Concursos Jurídicos',
     describe:
-      'Ainda em desenvolvimento, o Mapa do Saber é um projeto que visa ajudar os alunos a serem mais independentes e a serem mais autônomos. O projeto é gerenciador de tempo e tarefas para os alunos conseguirem se organizar e se planejar melhor os seus estudos, além de proporcionar tipos de atividades para os alunos serem mais engajados e motivados a estudar, como, Calendário de estudos com foco em disciplinas e outros afazeres dos seu dia a dia para poder se organizar melhor, ciclos de estudos com foco em disciplinas, entre outros. A plataforma ainda não esta pronta, mas já temos uma versão beta para testes, porém, não esta linberada ainda para o público.',
+      'Ainda em desenvolvimento, o <strong>Mapa do Saber</strong> é uma plataforma criada para ajudar estudantes a se tornarem mais independentes e organizados nos estudos.<br><br>O projeto funciona como um gerenciador de tempo e tarefas, permitindo que o aluno planeje sua rotina com mais eficiência. A proposta é oferecer ferramentas que aumentem o engajamento e a motivação, como:<ul> <li><strong>Calendário de estudos</strong> com foco em disciplinas e afazeres do dia a dia;</li> <li><strong>Ciclos de estudo</strong> personalizados para manter a consistência nas matérias;</li> <li>E outras funcionalidades voltadas à autonomia e disciplina nos estudos.</li> </ul> Atualmente, temos uma versão beta em testes internos, ainda não liberada ao público.',
     view_project: null,
     github_link: null,
     figma_link: null,
@@ -54,10 +56,6 @@ export const projects = [
       {
         name: 'css',
         icon: 'css',
-      },
-      {
-        name: 'html',
-        icon: 'html',
       },
       {
         name: 'figma',
