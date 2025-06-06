@@ -18,6 +18,26 @@ export const projects = [
         icon: 'typescript',
       },
       {
+        name: 'typescript',
+        icon: 'typescript',
+      },
+      {
+        name: 'typescript',
+        icon: 'typescript',
+      },
+      {
+        name: 'typescript',
+        icon: 'typescript',
+      },
+      {
+        name: 'typescript',
+        icon: 'typescript',
+      },
+      {
+        name: 'typescript',
+        icon: 'typescript',
+      },
+      {
         name: 'tailwind',
         icon: 'tailwind',
       },

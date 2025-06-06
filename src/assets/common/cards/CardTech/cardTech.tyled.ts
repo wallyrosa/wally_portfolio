@@ -67,7 +67,6 @@ export const syledCardTech = (props: syledCardTechProps) => {
     align-items: center;
     cursor: ${props?.isDisabled ? 'not-allowed' : 'pointer'};
     opacity: ${props?.isDisabled ? 0.5 : 1};
-    margin: 10px 0px;
     transform: scale(${props?.scale ? props.scale : '1'});
     transition: all 0.2s;
     &:hover {
