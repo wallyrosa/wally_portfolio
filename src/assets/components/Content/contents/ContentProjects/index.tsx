@@ -41,14 +41,7 @@ export function ContentProject() {
             <Box className="circleProject" />
             <Box className="circleProject2" />
             <Box
-              sx={{
-                margin: 'auto',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '30px',
-              }}
+              className="containerProject"
             >
               <Box className="wrapperProject">
                 <Box className="leftTech">

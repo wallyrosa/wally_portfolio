@@ -97,7 +97,7 @@ strong {
 
 .buttonTransparent {
     display: flex;
-    font-family: 'Jura';
+    font-family: 'Jura', sans-serif;
     padding: 10px 20px;
     justify-content: center;
     align-items: center;
@@ -112,6 +112,11 @@ strong {
     line-height: normal;
     text-align: center;
     text-decoration: none;
+}
+
+.buttonTransparent:hover {
+    transition: all 0.1s;
+    transform: scale(1.1);
 }
 
 .cubleStyleLeft {
@@ -273,7 +278,7 @@ strong {
     opacity: 0.4;
     color: var(--font-color-main);
     text-align: center;
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -288,6 +293,20 @@ strong {
     border-bottom: 6px solid var(--terminal-theme);
     margin-left: 20px;
     cursor: pointer;
+}
+
+.buttonAbaTerminal:hover {
+    transition: all 0.1s;
+    transform: scale(1.1);
+}
+
+.containerProject {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
 .animationToWarning {
@@ -307,6 +326,10 @@ strong {
     cursor: pointer;
     animation: jumpRevert 0.7s;
     position: relative;
+}
+
+.moreButton:hover {
+    scale: 1.1;
 }
 
 @keyframes jump {
@@ -380,7 +403,7 @@ strong {
     height: 100%;
     flex-shrink: 0;
     color: var(--font-color-main);
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 35px;
     font-style: normal;
     font-weight: 400;
@@ -389,7 +412,7 @@ strong {
 }
 
 .nameTerminal {
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 35px;
     font-style: normal;
     font-weight: 700;
@@ -502,7 +525,7 @@ strong {
 .titleContents {
     color: var(--font-color-main);
     text-align: center;
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
@@ -511,7 +534,7 @@ strong {
 
 .subTitleContents {
     text-align: center;
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 275;
@@ -537,7 +560,7 @@ strong {
     align-items: center;
     margin: auto;
     flex-direction: row;
-    gap: 70px;
+    gap: 30px;
 }
 
 .card {
@@ -671,7 +694,7 @@ strong {
 
 .terminalView {
     width: 750px;
-    height: 490px;
+    height: 435px;
     background: var(--gradient-terminal);
     border-radius: 20px;
     box-shadow: 0px 0px 40px 0px #000000b3;
@@ -702,7 +725,7 @@ strong {
 
 .titleProject {
     color: var(--font-color-main);
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -724,8 +747,10 @@ strong {
     justify-content: space-around;
     align-items: center;
     padding: 0px 15px 0px 0px;
-    overflow-y: hidden;
-    overflow-x: auto;
+}
+
+.rightTech .wrapperCard {
+    padding-right: 30px;
 }
 
 .rightTech {
@@ -746,7 +771,7 @@ strong {
 }
 
 .rightTech::-webkit-scrollbar, .leftTech::-webkit-scrollbar {
-    width: 5px;
+    height: 5px;
 }
 
 .screenShare {
@@ -760,7 +785,7 @@ strong {
 
 .comingSoon {
     color: var(--font-color-main);
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 50px;
     margin: 50px 0px;
     font-style: normal;
@@ -802,7 +827,7 @@ strong {
     gap: 15px;
     width: 50%;
     max-height: 100%;
-    height: 680px;
+    height: 640px;
     font-size: 1.8rem;
     text-align: justify;
     font-style: normal;
@@ -823,12 +848,17 @@ strong {
     font-weight: 700;
     line-height: 100%;
     width: fit-content;
+    text-align: start;
+}
+
+.wrapperCard {
+    gap: 55px;
 }
 
 .describeProjectTextContainer {
     overflow: auto;
     color: var(--font-color-main);
-    font-family: 'Jura';
+    font-family: 'Jura', sans-serif;
     padding: 0px 10px;
 }
 
@@ -1021,7 +1051,7 @@ strong {
     display: flex;
     color: var(--font-color-main);
     text-align: center;
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 50px;
     font-style: normal;
     font-weight: 100;
@@ -1033,7 +1063,7 @@ strong {
 .textEmailFooter {
     display: flex;
     color: var(--font-color-main);
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 275;
@@ -1087,7 +1117,7 @@ strong {
 
 .strongTextFooter {
     color: var(--font-color-main);
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
@@ -1096,7 +1126,7 @@ strong {
 .smallTextFooterContent {
     color: var(--font-color-main);
     text-align: center;
-    font-family: 'Bai Jamjuree';
+    font-family: 'Bai Jamjuree', sans-serif;
     font-size: 25px;
     font-style: normal;
     font-weight: 300;
