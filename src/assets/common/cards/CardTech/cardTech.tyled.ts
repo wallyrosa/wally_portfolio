@@ -28,8 +28,8 @@ export const syledCardTech = (props: syledCardTechProps) => {
       box-shadow: 0px 0px 3px 0px ${props.color};
     }
     @media (max-width: 600px) {
-      width: 30px !important;
-      height: 30px !important;
+      width: 40px !important;
+      height: 40px !important;
     }
   `;
 

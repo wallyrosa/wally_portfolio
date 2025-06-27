@@ -114,6 +114,13 @@
 
 }
 @media (max-width: 1250px) {
+    .skillsAvancadas {
+        height: auto !important;
+        width: 100%;
+    }
+    .card {
+        scale: 0.8;
+    }
     .contentMain {
         flex-direction: column;
         gap: 30px;
@@ -300,6 +307,9 @@
     }
 }
 @media (max-width: 760px) {
+    .terminal {
+        width: 560px !important;
+    }
     .terminalSmall {
         top: 400px;
         height: 120px;
@@ -365,7 +375,7 @@
     }
     .contentMain {
         flex-direction: column !important;
-        height: 34rem !important;
+        height: 75% !important;
         justify-content: space-between !important;
     }
     .skillsAvancadas {
@@ -373,8 +383,8 @@
         height: auto !important;
     }
     .terminal {
-        width: 295px !important;
-        height: 210px !important;
+        width: 425px !important;
+        height: 290px !important;
         border-radius: 10px !important;
         padding: 10px !important;
         margin: 0px !important;
@@ -410,34 +420,35 @@
         line-height: 136% !important;
     }
     .textAreaTerminal {
-        max-width: 236px !important;
+        max-width: 365px !important;
         line-height: 85% !important;
     }
     .backPerfil {
-        width: 333px !important;
-        height: 230px !important;
-        background-size: 230px 230px !important;
+        width: 470px !important;
+        height: 470px !important;
+        background-size: 460px 460px !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
     }
     .perfilImg {
         width: 100% !important;
-        height: 200px !important;
-        background-size: 205px 205px !important;
+        height: 420px !important;
+        background-size: 460px 460px !important;
         top: -25px !important;
         background-repeat: no-repeat;
         background-position: center;
     }
     .terminalSmall {
         padding: 8px 5px 20px 5px !important;
-        top: 150px !important;
-        height: 78px !important;
-        width: 327px !important;
+        top: 385px !important;
+        height: 100px !important;
+        width: 465px !important;
         border-radius: 10px !important;
+        gap: 20px;
     }
     .terminalView {
-        width: 330px !important;
-        height: 630px !important;
+        width: 505px !important;
+        height: 350px !important;
     }
     .describeProject {
         width: 330px !important;
@@ -458,7 +469,7 @@
     }
     .wrapperProject {
         flex-direction: column;
-        height: 400px !important;
+        height: 100% !important;
     }
     .wrapperCard {
         justify-content: space-around;
