@@ -77,6 +77,7 @@ export const syledCardTech = (props: syledCardTechProps) => {
     }
     @media (max-width: 600px) {
       height: 70px !important;
+      width: 50px !important;
     }
   `;
 

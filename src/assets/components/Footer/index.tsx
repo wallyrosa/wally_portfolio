@@ -1,29 +1,23 @@
 import { Box } from '@mui/material';
 import { LineStyle } from '../../common/lines/LineStyle';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { useState } from 'react';
+import { useCopyToClipboard } from '../../hooks/useCopyToClipboard';
 
 export function Footer() {
-  const [showHelper, setHelper] = useState<boolean>(false);
-  function copy() {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard
-        .writeText('wallysson.rosa12@gmail.com')
-        .then(() => {
-          setHelper(true);
-          setTimeout(() => {
-            setHelper(false);
-          }, 2000);
-        })
-        .catch((err) => {
-          console.error('Erro ao copiar texto:', err);
-        });
-    } else {
-      console.error(
-        'A função writeText não é suportada neste navegador ou dispositivo móvel.'
-      );
+  const { copyToClipboard, isCopied } = useCopyToClipboard();
+
+  const handleCopy = async (event: React.MouseEvent | React.TouchEvent) => {
+    // Garante que o evento seja disparado por uma interação real do usuário
+    event.preventDefault();
+    event.stopPropagation();
+
+    try {
+      await copyToClipboard('wallysson.rosa12@gmail.com');
+    } catch (error) {
+      console.error('Erro ao copiar:', error);
     }
-  }
+  };
+
   return (
     <footer className="footer">
       <Box
@@ -53,8 +47,18 @@ export function Footer() {
               }}
             >
               <Box className="strongTextFooter">Ou copie e cole :D</Box>
-              <ContentCopyIcon onClick={() => copy()} className="copyIcon" />
-              {showHelper && <Box className="helperCopy">Copiado!</Box>}
+              <ContentCopyIcon
+                onClick={handleCopy}
+                onTouchEnd={handleCopy}
+                className="copyIcon"
+                sx={{
+                  cursor: 'pointer',
+                  userSelect: 'none',
+                  WebkitUserSelect: 'none',
+                  WebkitTouchCallout: 'none',
+                }}
+              />
+              {isCopied && <Box className="helperCopy">Copiado!</Box>}
             </Box>
           </Box>
         </LineStyle>

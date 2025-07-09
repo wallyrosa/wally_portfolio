@@ -309,6 +309,7 @@
 @media (max-width: 760px) {
     .terminal {
         width: 560px !important;
+        height: 230px !important;
     }
     .terminalSmall {
         top: 400px;
@@ -376,7 +377,7 @@
     .contentMain {
         flex-direction: column !important;
         height: 75% !important;
-        justify-content: space-between !important;
+        justify-content: center !important;
     }
     .skillsAvancadas {
         flex-direction: column !important;
@@ -448,14 +449,21 @@
         gap: 10px;
     }
     .terminalView {
-        width: 505px !important;
-        height: 350px !important;
+        width: 100% !important;
+        height: 210px !important;
+        margin: 20px 0px;
     }
     .describeProject {
         width: 330px !important;
-        max-height: 120px !important;
+        max-height: 400px !important;
         margin: 0px !important;
+        max-width: 85% !important;
+    }
+    .describeProjectTextContainer {
         font-size: 1.2rem !important;
+        max-height: 100% !important;
+        line-height: 1.2 !important;
+        text-align: start !important;
     }
     .titleProject {
         font-size: 20px !important;
@@ -470,17 +478,24 @@
     }
     .wrapperProject {
         flex-direction: column;
-        height: 100% !important;
+        height: 65% !important;
+        padding: 20px 0px !important;
+    }
+    .comingSoon {
+        font-size: 35px !important;
+        text-align: center !important;
     }
     .wrapperCard {
         justify-content: space-around;
-        flex-direction: row;
+        flex-direction: row !important;
         align-items: center;
         width: 100%;
-        height: 120px !important;
+        height: 65px !important;
+        gap: 20px !important;
+        padding: 10px 0px 0px 0px !important;
     }
     .leftTech, .rightTech {
-        max-height: 70px !important;
+        max-height: 85px !important;
         width: 100% !important;
         border-right: none !important;
         border-left: none !important;
@@ -489,13 +504,14 @@
         overflow-x: auto;
         overflow-y: hidden;
         justify-content: flex-start !important;
+        min-height: 60px !important;
     }
     .leftTech {
-        margin: 0px 0px 10px 0px !important;
         border-bottom: 5px solid var(--terminal-theme);
+        margin: 0px !important;
     }
     .rightTech {
-        margin: 10px 0px 0px 0px !important;
+        margin: 0px 0px 10px 0px !important;
         border-top: 5px solid var(--terminal-theme);
     }
     .rightTech::-webkit-scrollbar, .leftTech::-webkit-scrollbar {
@@ -528,6 +544,7 @@
     }
     .smallTextFooter {
         gap: 3px !important;
+        font-size: 12px !important;
     }
     .helperCopy {
         margin: 56px -143px 0px 0px !important;
@@ -535,19 +552,51 @@
         height: 15px;
         font-size: 12px;
     }
+    .containerProject {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .Typewriter__cursor {
+        font-size: 20px !important;
+    }
+    .titleDescribe {
+        font-size: 16px !important;
+    }
+    .describeProjectText {
+        font-size: 20px !important;
+    }
 }
-@media (max-width: 360px) {
+@media (max-width: 380px) {
+    .perfilImg {
+        height: 260px !important;
+        background-size: 260px 260px !important;
+    }
+    .terminalSmall {
+        padding: 10px 5px 15px 5px !important;
+        height: 85px !important;
+        top: 200px !important;
+    }
+}
+@media (max-width: 425px) {
     .textEmailFooter {
         font-size: 13px !important;
     }
+    .terminal {
+        height: 230px !important;
+    }
     .terminalView {
-        width: 290px !important;
+        width: 350px !important;
+        height: 230px !important;
+        min-height: 230px !important;
     }
     .terminalSmall {
-        width: 295px !important;
+        padding: 15px 5px 15px 5px !important;
+        width: 325px !important;
+        height: 95px !important;
+        left: 11px !important;
     }
     .wrapperProject {
-        height: 345px !important;
+        height: 435px !important;
     }
     .describeProject {
         width: 290px !important;
@@ -560,5 +609,15 @@
     }
     .helperCopy {
         margin: 56px -122px 0px 0px !important;
+    }
+    .leftTech, .rightTech {
+        max-height: 75px !important;
+        min-height: 75px !important;
+    }
+    .comingSoon {
+        height: 100% !important;
+    }
+    .comingSoonText {
+        margin: 85px 0px !important;
     }
 }

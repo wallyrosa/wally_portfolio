@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import { colorCard } from '../colorCard';
 import { syledCardTech } from './cardTech.tyled';
 import { ReactNode } from 'react';
+import { useClickTouch } from '../../../hooks/onClickTouch';
 
 interface CardTechProps {
   name?: string;
@@ -21,12 +22,18 @@ export function CardTech(props: CardTechProps) {
     isDisabled: props?.isDisabled,
   });
 
+  const handleClick = () => {
+    if (props?.isDisabled) return;
+    props?.onClick?.();
+  };
+
+  const { onTouchStart, onTouchEnd } = useClickTouch(handleClick);
+
   return (
     <CardTech
-      onClick={() => {
-        if (props?.isDisabled) return;
-        props?.onClick?.();
-      }}
+      onClick={handleClick}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
     >
       <WrapperCard>
         {props.children ? (

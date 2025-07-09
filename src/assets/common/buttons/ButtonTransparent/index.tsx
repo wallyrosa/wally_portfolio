@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { goTo } from '../../../hooks/goTo';
+import { useClickTouch } from '../../../hooks/onClickTouch';
 
 interface ButtonTransparentProps {
   onClick?: () => void;
@@ -15,11 +16,22 @@ export function ButtonTransparent(props: ButtonTransparentProps) {
     height: `${props?.height ? props?.height : '35px'}`,
   };
 
+  const handleClick = () => {
+    if (props.onClick) {
+      props.onClick();
+    }
+    goTo(props?.to);
+  };
+
+  const { onTouchStart, onTouchEnd } = useClickTouch(handleClick);
+
   return (
     <div
       id="anchor"
       style={style}
-      onClick={() => goTo(props?.to)}
+      onClick={handleClick}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
       className="buttonTransparent"
     >
       {props?.children}

@@ -6,8 +6,11 @@ import { CardTech } from '../../../../common/cards/CardTech';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { ButtonsTerminal } from '../../../../common/buttons/ButtonsTerminal';
+import { useIsMobile } from '../../../../hooks/useIsMobile';
 
 export function ContentProject() {
+  const isMobile = useIsMobile();
+
   return (
     <>
       {projects?.map((project, index) => (
@@ -15,10 +18,11 @@ export function ContentProject() {
           <Box
             sx={{
               display: 'flex',
-              height: '100vh',
+              height: '100%',
+              padding: isMobile ? '10px 0px 0px 0px' : '0px',
               alignItems: 'center',
               justifyContent: 'center',
-              scrollSnapAlign: 'start',
+              scrollSnapAlign: isMobile ? 'none' : 'start',
               flexDirection: 'column',
             }}
           >
@@ -40,9 +44,7 @@ export function ContentProject() {
             )}
             <Box className="circleProject" />
             <Box className="circleProject2" />
-            <Box
-              className="containerProject"
-            >
+            <Box className="containerProject">
               <Box className="wrapperProject">
                 <Box className="leftTech">
                   <Box className="wrapperCard">
@@ -81,7 +83,7 @@ export function ContentProject() {
                       margin: '0px 20px',
                       display: 'flex',
                       width: '93%',
-                      height: '95%',
+                      height: '90%',
                       flexDirection: 'column',
                       justifyContent: 'space-evenly',
                       alignItems: 'center',
@@ -126,11 +128,10 @@ export function ContentProject() {
         </Box>
       ))}
       <Box
-        sx={{ scrollSnapAlign: 'start', height: '80vh' }}
+        sx={{ scrollSnapAlign: isMobile ? 'none' : 'start', height: '80vh' }}
         className="fullScreen comingSoon"
       >
-        <Box></Box>
-        <Box>
+        <Box className="comingSoonText">
           EM BREVE:
           <strong
             style={{
