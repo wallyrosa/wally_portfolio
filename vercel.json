@@ -1,4 +1,4 @@
 {
-    "installCommand": "pnpm install --yes",
+    "installCommand": "pnpm install --force",
     "buildCommand": "react-scripts build"
 }
