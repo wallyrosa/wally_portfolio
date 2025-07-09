@@ -18,7 +18,7 @@ export function ContentProject() {
           <Box
             sx={{
               display: 'flex',
-              height: '100%',
+              height: isMobile ? '100%' : '100vh',
               padding: isMobile ? '10px 0px 0px 0px' : '0px',
               alignItems: 'center',
               justifyContent: 'center',
