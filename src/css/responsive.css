@@ -619,5 +619,6 @@
     }
     .comingSoonText {
         margin: 85px 0px !important;
+        display: block !important;
     }
 }
