@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: '~/Poli Digital',
+    title: 'Poli Digital',
     imgClass: 'poliDigital',
     titleDescribe: 'Sistema de atendimento integrado via WhatsApp',
     describe:
@@ -32,7 +32,7 @@ export const projects = [
     ],
   },
   {
-    title: '~/Mapa do Saber',
+    title: 'Mapa do Saber',
     imgClass: 'mapaDoSaber',
     titleDescribe: 'Plataforma de Estudos para Concursos Jurídicos',
     describe:

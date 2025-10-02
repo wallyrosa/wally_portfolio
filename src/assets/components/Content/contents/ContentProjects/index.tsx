@@ -96,7 +96,10 @@ export function ContentProject() {
                       }}
                     >
                       <ButtonsTerminal style={{ position: 'absolute' }} />
-                      <Box className="titleProject">{project.title}</Box>
+                      <Box className="titleProject">
+                        <span className="titleProjectSymbol">~$</span>
+                        <span>{project.title}</span>
+                      </Box>
                     </Box>
                     <Box
                       sx={{ direction: 'ltr' }}

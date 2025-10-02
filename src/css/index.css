@@ -744,7 +744,12 @@ strong {
     display: flex;
     justify-content: center;
     align-content: center;
+    gap: 5px;
     width: 100%;
+}
+
+.titleProjectSymbol {
+    color: var(--terminal-theme);
 }
 
 .leftTech {

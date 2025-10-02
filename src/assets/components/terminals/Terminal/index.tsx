@@ -20,7 +20,7 @@ export function Terminal() {
             }
           }}
         >
-          ~/welcome
+          ~ welcome
         </button>
         <button
           className={`buttonAbaTerminal animationToWarning ${
@@ -32,7 +32,7 @@ export function Terminal() {
             }
           }}
         >
-          ~/about_me
+          ~ about_me
         </button>
         <div className="moreButton" onClick={() => goTo('#skills')}>
           <></>
