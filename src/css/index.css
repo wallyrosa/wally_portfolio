@@ -12,9 +12,9 @@
     --white-color-25: #ffffff40;
     --terminal-theme: #BB91F3;
     --gradient-terminal: linear-gradient(313deg, #191422 0%, #1B0F35 69.58%);
-    --red-color: #e56063;
-    --yellow-color: #e4c030;
-    --green-color: #2ec24f;
+    --red-color: #ff5155;
+    --yellow-color: #ffdd56;
+    --green-color: #7aff81;
 }
 
 html {
@@ -433,6 +433,7 @@ strong {
 
 .titleTerminal {
     font-weight: 600;
+    color: var(--green-color);
 }
 
 .contentMain {
