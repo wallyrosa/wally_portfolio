@@ -648,6 +648,16 @@ strong {
     background-size: contain;
 }
 
+.reactnative {
+    background-image: url('../assets/imgs/icons/reactnative_icon.svg');;
+    background-size: contain;
+}
+
+.expo {
+    background-image: url('../assets/imgs/icons/expo_icon.svg');
+    background-size: contain;
+}
+
 .typescript {
     background-image: url('../assets/imgs/icons/typescript_icon.svg');
     background-size: contain;
@@ -893,6 +903,71 @@ strong {
     border-radius: 8px;
 }
 
+.imgTerminalInteractive {
+    cursor: zoom-in;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.imgTerminalInteractive:hover,
+.imgTerminalInteractive:focus-visible {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 0px 2px var(--terminal-theme);
+    outline: none;
+}
+
+.projectImageDialog {
+    width: 100%;
+    height: 80vh;
+    max-height: 92vh;
+    padding: 24px;
+    background: var(--gradient-terminal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.projectImagePreview {
+    width: 96%;
+    height: 92%;
+    border-radius: 12px;
+    background-size: contain;
+    transform-origin: center center;
+    transition: transform 0.1s ease;
+    will-change: transform;
+    cursor: zoom-in;
+    background-color: var(--background-terminal);
+}
+
+.projectImagePreviewImage {
+    max-width: 96%;
+    max-height: 92%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    user-select: none;
+    -webkit-user-drag: none;
+    background-color: var(--background-terminal);
+    display: block;
+}
+
+.projectImageCloseButton {
+    position: absolute !important;
+    top: 14px;
+    right: 14px;
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    color: var(--font-color-main) !important;
+    background-color: #000000b3 !important;
+    border: 1px solid #ffffff66 !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+}
+
 .poliDigital {
     background-image: url('../assets/imgs/poli-digital.png');
     background-repeat: no-repeat;
@@ -902,6 +977,14 @@ strong {
 }
 .mapaDoSaber {
     background-image: url('../assets/imgs/mapa-do-saber.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: var(--background-terminal);
+}
+
+.yellotmob {
+    background-image: url('../assets/imgs/yellotmob.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

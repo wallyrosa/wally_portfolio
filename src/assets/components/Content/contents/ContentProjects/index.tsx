@@ -1,15 +1,42 @@
-import { Box } from '@mui/material';
+import { Box, Dialog, IconButton } from '@mui/material';
+import { useEffect, useState } from 'react';
 import { LineRight } from '../../../../common/lines/LineRight';
 import { LineLeft } from '../../../../common/lines/LineLeft';
 import { projects } from './projects';
 import { CardTech } from '../../../../common/cards/CardTech';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import CloseIcon from '@mui/icons-material/Close';
 import { ButtonsTerminal } from '../../../../common/buttons/ButtonsTerminal';
 import { useIsMobile } from '../../../../hooks/useIsMobile';
 
+const PROJECT_IMAGE_MAP = {
+  poliDigital: new URL('../../../../imgs/poli-digital.png', import.meta.url).href,
+  mapaDoSaber: new URL('../../../../imgs/mapa-do-saber.png', import.meta.url)
+    .href,
+  yellotmob: new URL('../../../../imgs/yellotmob.png', import.meta.url).href,
+};
+
 export function ContentProject() {
   const isMobile = useIsMobile();
+  const [selectedImageClass, setSelectedImageClass] = useState<string | null>(
+    null
+  );
+
+  useEffect(() => {
+    Object.values(PROJECT_IMAGE_MAP).forEach((src) => {
+      const image = new Image();
+      image.decoding = 'async';
+      image.src = src;
+    });
+  }, []);
+
+  const closePreview = () => {
+    setSelectedImageClass(null);
+  };
+  const selectedImageSrc = selectedImageClass
+    ? PROJECT_IMAGE_MAP[selectedImageClass as keyof typeof PROJECT_IMAGE_MAP]
+    : null;
 
   return (
     <>
@@ -103,7 +130,19 @@ export function ContentProject() {
                     </Box>
                     <Box
                       sx={{ direction: 'ltr' }}
-                      className={`imgTerminal ${project.imgClass}`}
+                      className={`imgTerminal imgTerminalInteractive ${project.imgClass}`}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Ampliar imagem do projeto ${project.title}`}
+                      onClick={() => {
+                        setSelectedImageClass(project.imgClass);
+                      }}
+                      onKeyDown={(event) => {
+                        if (event.key === 'Enter' || event.key === ' ') {
+                          event.preventDefault();
+                          setSelectedImageClass(project.imgClass);
+                        }
+                      }}
                     />
                   </Box>
                 </Box>
@@ -153,6 +192,46 @@ export function ContentProject() {
           <LineLeft width={'60%'} />
         </Box>
       </Box>
+      <Dialog
+        open={Boolean(selectedImageClass)}
+        onClose={closePreview}
+        keepMounted
+        maxWidth="lg"
+        fullWidth
+        transitionDuration={{ appear: 20, enter: 20, exit: 60 }}
+        aria-labelledby="project-image-preview"
+        PaperProps={{
+          sx: {
+            margin: 0,
+            width: 'min(96vw, 1400px)',
+            maxWidth: '96vw',
+            background: 'transparent',
+            boxShadow: 'none',
+            borderRadius: '16px',
+            overflow: 'hidden',
+          },
+        }}
+      >
+        <Box className="projectImageDialog">
+          <IconButton
+            onClick={closePreview}
+            className="projectImageCloseButton"
+            aria-label="Fechar imagem ampliada"
+          >
+            <CloseIcon fontSize="small" />
+          </IconButton>
+          {selectedImageSrc && (
+            <img
+              src={selectedImageSrc}
+              alt="Preview ampliado do projeto"
+              className="projectImagePreviewImage"
+              loading="eager"
+              decoding="async"
+              draggable={false}
+            />
+          )}
+        </Box>
+      </Dialog>
     </>
   );
 }

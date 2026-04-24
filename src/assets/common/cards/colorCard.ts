@@ -6,7 +6,13 @@ export const colorCard = (icon?: string) => {
       color = '#F16E38';
       break;
     case 'react':
-      color = '#56D4F5';
+      color = '#58c4dc';
+      break;
+    case 'reactnative':
+      color = '#71d6ec';
+      break;
+    case 'expo':
+      color = '#ffffff';
       break;
     case 'javascript':
       color = '#F0DB4F';

@@ -63,4 +63,37 @@ export const projects = [
       },
     ],
   },
+  {
+    title: 'Yellotmob',
+    imgClass: 'yellotmob',
+    titleDescribe: 'Aplicativo de recarga para carros elétricos',
+    describe:
+      'Um aplicativo de <strong>recarga para carros elétricos</strong>, desenvolvido com o objetivo de facilitar a vida dos usuários, permitindo que eles recarreguem seus veículos de forma mais simples e eficiente.<br><br>Quando embarquei no projeto, atuei como desenvolvedor <strong>Frontend</strong>, trabalhando em conjunto com os times de <strong>Backend</strong> e <strong>Produto</strong>. Participei do desenvolvimento de novas funcionalidades voltadas à melhoria da experiência do usuário. Fiz a parte de otimização de performance e acessibilidade do aplicativo. Támbem redezenhei junto ao Product Designer o system design do aplicativo pronto para ser capaz de implementações de white label. E reforçando o impacto da marca para os usuários. Entre outras funcionalidades que entro mais a fundo no meu currículo.',
+    view_project:
+      'https://play.google.com/store/apps/details?id=io.yellotmob.app&pli=1',
+    github_link: null,
+    figma_link: null,
+    tech: [
+      {
+        name: 'figma',
+        icon: 'figma',
+      },
+      {
+        name: 'tailwind',
+        icon: 'tailwind',
+      },
+      {
+        name: 'reactnative',
+        icon: 'reactnative',
+      },
+      {
+        name: 'typescript',
+        icon: 'typescript',
+      },
+      {
+        name: 'expo',
+        icon: 'expo',
+      },
+    ],
+  },
 ];
