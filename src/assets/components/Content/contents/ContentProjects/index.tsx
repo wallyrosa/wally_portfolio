@@ -200,8 +200,8 @@ export function ContentProject() {
         fullWidth
         transitionDuration={{ appear: 20, enter: 20, exit: 60 }}
         aria-labelledby="project-image-preview"
-        PaperProps={{
-          sx: {
+        sx={{
+          '& .MuiDialog-paper': {
             margin: 0,
             width: 'min(96vw, 1400px)',
             maxWidth: '96vw',

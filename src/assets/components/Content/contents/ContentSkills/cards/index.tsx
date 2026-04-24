@@ -23,6 +23,14 @@ export const cardsAvancados = [
     icon: 'css',
     name: 'css',
   },
+  {
+    icon: 'expo',
+    name: 'expo',
+  },
+  {
+    icon: 'reactnative',
+    name: 'react native',
+  },
 ];
 export const cardsDesenvolvimento = [
   {

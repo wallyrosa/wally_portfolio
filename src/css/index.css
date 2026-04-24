@@ -566,13 +566,15 @@ strong {
 
 .skillsAvancadas {
     width: 80%;
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: auto;
     flex-direction: row;
     gap: 30px;
+    overflow-x: auto;
+    padding: 10px;
 }
 
 .card {
