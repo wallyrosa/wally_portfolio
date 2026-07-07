@@ -37,7 +37,7 @@ export const projects = [
     titleDescribe: 'Plataforma de Estudos para Concursos Jurídicos',
     describe:
       'Ainda em desenvolvimento, o <strong>Mapa do Saber</strong> é uma plataforma criada para ajudar estudantes a se tornarem mais independentes e organizados nos estudos.<br><br>O projeto funciona como um gerenciador de tempo e tarefas, permitindo que o aluno planeje sua rotina com mais eficiência. A proposta é oferecer ferramentas que aumentem o engajamento e a motivação, como:<ul> <li><strong>Calendário de estudos</strong> com foco em disciplinas e afazeres do dia a dia;</li> <li><strong>Ciclos de estudo</strong> personalizados para manter a consistência nas matérias;</li> <li>E outras funcionalidades voltadas à autonomia e disciplina nos estudos.</li> </ul> Atualmente, temos uma versão beta em testes internos, ainda não liberada ao público.',
-    view_project: null,
+    view_project: "https://www.mapadosaber.com.br",
     github_link: null,
     figma_link: null,
     tech: [

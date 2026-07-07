@@ -20,10 +20,7 @@ export function SmallTerminal() {
         </CardTech>
         <CardTech
           onClick={() =>
-            window.open(
-              'https://www.linkedin.com/in/wallysson-da-silva-rosa-32b34b214/',
-              '_blank'
-            )
+            window.open('https://www.linkedin.com/in/wallysson-rosa', '_blank')
           }
           scale="1.3"
           name="Linkedin"

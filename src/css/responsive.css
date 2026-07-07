@@ -13,7 +13,8 @@
     .perfilImg {
         width: 485px;
         height: 485px;
-        background-size: 485px 485px;
+        background-size: 585px 585px;
+        background-position: -46px 2px;
     }
 
     .gitlab_icon {
@@ -435,10 +436,10 @@
     .perfilImg {
         width: 100% !important;
         height: 300px !important;
-        background-size: 300px 300px !important;
+        background-size: 350px 350px !important;
         top: -40px !important;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: -5px 8px;
     }
     .terminalSmall {
         padding: 8px 5px 20px 5px !important;
@@ -569,7 +570,8 @@
 @media (max-width: 380px) {
     .perfilImg {
         height: 260px !important;
-        background-size: 260px 260px !important;
+        background-size: 300px 300px !important;
+        background-position: 28px 0px;
     }
     .terminalSmall {
         padding: 10px 5px 15px 5px !important;
@@ -603,6 +605,8 @@
     }
     .perfilImg {
         width: 96% !important;
+        background-position: 5px -20px;
+        background-size: 350px 350px !important;
     }
     .subTitleContents {
         font-size: 30px !important;
